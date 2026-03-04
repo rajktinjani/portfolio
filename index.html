@@ -359,7 +359,123 @@
             </div>
           </aside>
         </div>
+/* ===== Projects polish (recruiter-grade) ===== */
 
+.grid3{
+  gap: 16px;
+}
+
+.item{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  padding: 18px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.item:hover{
+  transform: translateY(-4px);
+  border-color: rgba(124,92,255,.45);
+  box-shadow: 0 14px 44px rgba(0,0,0,.28);
+}
+
+.itemTop{
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.itemTitle{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+}
+
+.icon{
+  width: 42px;
+  height: 42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 14px;
+  background: rgba(124,92,255,.14);
+  border: 1px solid rgba(124,92,255,.25);
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+
+.subline{
+  margin-top: 6px;
+  color: rgba(255,255,255,.68);
+  font-size: 13px;
+}
+
+.metaRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  margin: 12px 0 12px;
+}
+
+.pill{
+  font-size: 12px;
+  color: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  text-decoration:none;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.06);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.22);
+}
+
+.btn.primary{
+  background: rgba(124,92,255,.22);
+  border-color: rgba(124,92,255,.38);
+}
+
+.btn.primary:hover{
+  background: rgba(124,92,255,.30);
+  border-color: rgba(124,92,255,.55);
+}
+
+/* Featured card subtle emphasis */
+.item.featured{
+  position: relative;
+  border-color: rgba(124,92,255,.28);
+}
+
+.item.featured::before{
+  content:"";
+  position:absolute;
+  inset: -1px;
+  border-radius: 18px;
+  pointer-events:none;
+  background: radial-gradient(600px 120px at 20% 0%, rgba(124,92,255,.22), transparent 60%);
+}
         <!-- ABOUT -->
         <section id="about">
           <div class="sectionHead">
