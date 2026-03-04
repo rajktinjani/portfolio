@@ -268,6 +268,83 @@
         display:none;
         font-size:13px;
       }
+      /* ===== Projects polish (recruiter-grade) ===== */
+
+.item{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:18px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(124,92,255,.45);
+  box-shadow:0 14px 44px rgba(0,0,0,.28);
+}
+
+.icon{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  background:rgba(124,92,255,.14);
+  border:1px solid rgba(124,92,255,.25);
+  font-size:18px;
+}
+
+.subline{
+  margin-top:6px;
+  color:rgba(255,255,255,.68);
+  font-size:13px;
+}
+
+.metaRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0;
+}
+
+.pill{
+  font-size:12px;
+  color:rgba(255,255,255,.86);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  padding:6px 10px;
+  border-radius:999px;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  text-decoration:none;
+  color:rgba(255,255,255,.92);
+  background:rgba(255,255,255,.06);
+}
+
+.btn:hover{
+  background:rgba(255,255,255,.09);
+}
+
+.btn.primary{
+  background:rgba(124,92,255,.22);
+  border-color:rgba(124,92,255,.38);
+}
     </style>
   </head>
 
