@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal website showcasing professional work, projects, and contact details." />
+    <title>Your Name — Portfolio</title>
+    <style>
+      :root{
+        --bg: #0b1020;
+        --panel: rgba(255,255,255,.06);
+        --panel2: rgba(255,255,255,.10);
+        --text: rgba(255,255,255,.92);
+        --muted: rgba(255,255,255,.68);
+        --line: rgba(255,255,255,.12);
+        --accent: #7c5cff;
+        --accent2: #2dd4bf;
+        --shadow: 0 12px 40px rgba(0,0,0,.35);
+        --radius: 18px;
+        --max: 1100px;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        font-family:var(--sans);
+        color:var(--text);
+        background:
+          radial-gradient(1200px 700px at 12% 0%, rgba(124,92,255,.25), transparent 60%),
+          radial-gradient(900px 700px at 88% 10%, rgba(45,212,191,.18), transparent 55%),
+          radial-gradient(900px 700px at 55% 100%, rgba(124,92,255,.12), transparent 55%),
+          var(--bg);
+        min-height:100vh;
+      }
+      a{color:inherit; text-decoration:none}
+      .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 70px}
+      .nav{
+        position:sticky; top:14px; z-index:50;
+        display:flex; align-items:center; justify-content:space-between;
+        padding:12px 14px;
+        background:rgba(10,16,32,.55);
+        border:1px solid var(--line);
+        border-radius:999px;
+        backdrop-filter: blur(12px);
+        box-shadow: var(--shadow);
+      }
+      .brand{display:flex; gap:10px; align-items:center}
+      .dot{
+        width:10px; height:10px; border-radius:999px;
+        background:linear-gradient(135deg, var(--accent), var(--accent2));
+        box-shadow:0 0 0 6px rgba(124,92,255,.12);
+      }
+      .brand b{letter-spacing:.2px}
+      .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+      .navlinks a{
+        padding:8px 10px;
+        border-radius:999px;
+        color:var(--muted);
+        font-size:14px;
+      }
+      .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+      .cta{
+        background:linear-gradient(135deg, var(--accent), var(--accent2));
+        color:#061023;
+        padding:9px 12px;
+        border-radius:999px;
+        font-weight:700;
+      }
+      .cta:hover{filter:brightness(1.05)}
+      .hero{
+        margin-top:26px;
+        display:grid;
+        grid-template-columns: 1.35fr .65fr;
+        gap:18px;
+      }
+      @media (max-width: 900px){
+        .hero{grid-template-columns:1fr}
+        .navlinks{display:none}
+      }
+      .card{
+        background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+        border:1px solid var(--line);
+        border-radius:var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .heroMain{padding:26px}
+      .kicker{
+        display:inline-flex; gap:8px; align-items:center;
+        padding:7px 10px;
+        border-radius:999px;
+        background:rgba(255,255,255,.06);
+        border:1px solid var(--line);
+        color:var(--muted);
+        font-family:var(--mono);
+        font-size:12px;
+      }
+      h1{
+        margin:14px 0 10px;
+        font-size:44px;
+        line-height:1.05;
+        letter-spacing:-.8px;
+      }
+      .sub{
+        margin:0;
+        color:var(--muted);
+        font-size:17px;
+        line-height:1.6;
+        max-width:62ch;
+      }
+      .heroActions{
+        display:flex; gap:10px; flex-wrap:wrap;
+        margin-top:18px;
+      }
+      .btn{
+        display:inline-flex; align-items:center; gap:10px;
+        padding:11px 14px;
+        border-radius:12px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,.06);
+        color:var(--text);
+        font-weight:650;
+      }
+      .btn:hover{background:rgba(255,255,255,.09)}
+      .btnPrimary{
+        background:linear-gradient(135deg, var(--accent), var(--accent2));
+        color:#061023;
+        border:none;
+      }
+      .btnPrimary:hover{filter:brightness(1.05)}
+      .heroSide{padding:22px}
+      .pfp{
+        width:100%;
+        aspect-ratio: 1 / 1;
+        border-radius:16px;
+        background:
+          radial-gradient(circle at 30% 25%, rgba(255,255,255,.22), transparent 45%),
+          radial-gradient(circle at 70% 85%, rgba(255,255,255,.18), transparent 55%),
+          linear-gradient(135deg, rgba(124,92,255,.35), rgba(45,212,191,.25));
+        border:1px solid var(--line);
+        display:flex; align-items:center; justify-content:center;
+        color:rgba(255,255,255,.78);
+        font-family:var(--mono);
+        text-align:center;
+        padding:18px;
+      }
+      .meta{
+        margin-top:14px;
+        display:grid;
+        gap:10px;
+      }
+      .metaRow{
+        display:flex; justify-content:space-between; gap:10px;
+        padding:10px 12px;
+        border:1px solid var(--line);
+        border-radius:14px;
+        background:rgba(255,255,255,.04);
+      }
+      .metaRow span{color:var(--muted); font-size:13px}
+      .metaRow b{font-size:13px}
+      section{margin-top:22px}
+      .sectionHead{
+        display:flex; align-items:end; justify-content:space-between; gap:12px;
+        margin:22px 0 10px;
+      }
+      .sectionHead h2{margin:0; font-size:22px; letter-spacing:-.2px}
+      .sectionHead p{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
+      .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+      .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+      @media (max-width: 900px){
+        .grid2,.grid3{grid-template-columns:1fr}
+      }
+      .panel{padding:18px}
+      .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+      .chip{
+        font-family:var(--mono);
+        font-size:12px;
+        padding:6px 8px;
+        border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,.04);
+        color:rgba(255,255,255,.80);
+      }
+      .item{
+        padding:16px;
+        border:1px solid var(--line);
+        border-radius:16px;
+        background:rgba(255,255,255,.04);
+      }
+      .itemTop{
+        display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      }
+      .itemTop b{font-size:15px}
+      .itemTop span{color:var(--muted); font-size:13px}
+      .item p{margin:10px 0 0; color:var(--muted); line-height:1.6}
+      ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.6}
+      .footer{
+        margin-top:26px;
+        padding:18px 18px;
+        border-top:1px solid var(--line);
+        color:var(--muted);
+        display:flex;
+        justify-content:space-between;
+        gap:12px;
+        flex-wrap:wrap;
+        font-size:14px;
+      }
+      .tiny{font-family:var(--mono); font-size:12px}
+      .sep{height:1px; background:var(--line); margin:14px 0}
+      .badge{
+        display:inline-flex; align-items:center; gap:8px;
+        padding:7px 10px;
+        border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,.04);
+        color:var(--muted);
+        font-size:13px;
+      }
+      .badge i{
+        width:9px; height:9px; border-radius:999px;
+        background:var(--accent2);
+        box-shadow:0 0 0 6px rgba(45,212,191,.12);
+      }
+      .contactGrid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px}
+      @media (max-width: 900px){.contactGrid{grid-template-columns:1fr}}
+      .field{
+        display:grid; gap:6px; margin-top:10px
+      }
+      label{font-size:13px; color:var(--muted)}
+      input, textarea{
+        width:100%;
+        padding:12px 12px;
+        border-radius:12px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,.04);
+        color:var(--text);
+        font:inherit;
+      }
+      textarea{min-height:120px; resize:vertical}
+      .note{color:var(--muted); font-size:13px; line-height:1.55}
+      .toast{
+        position:fixed;
+        bottom:16px; left:50%;
+        transform:translateX(-50%);
+        padding:10px 12px;
+        border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(10,16,32,.72);
+        backdrop-filter: blur(10px);
+        color:var(--text);
+        box-shadow: var(--shadow);
+        display:none;
+        font-size:13px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="nav">
+        <div class="brand">
+          <div class="dot"></div>
+          <b id="brandName">Your Name</b>
+        </div>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#contact">Let’s talk</a>
+        </nav>
+        <a class="cta" href="#contact">Contact</a>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <div class="hero">
+          <section class="card heroMain" aria-label="Intro">
+            <span class="kicker">👋 Available for internships / full-time • <span id="location">Boston, MA</span></span>
+            <h1>
+              I’m <span id="name">Your Name</span> —
+              <br />
+              <span style="background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;">
+                finance + analytics
+              </span>
+              focused builder.
+            </h1>
+            <p class="sub" id="headline">
+              I turn messy data into decisions — dashboards, models, and clear strategy. Here you’ll find my work, experience, and how to reach me.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn btnPrimary" id="resumeBtn" href="#" download>
+                ⬇️ Download Resume (PDF)
+              </a>
+              <a class="btn" id="linkedinBtn" href="#" target="_blank" rel="noreferrer">
+                🔗 LinkedIn
+              </a>
+              <a class="btn" id="githubBtn" href="#" target="_blank" rel="noreferrer">
+                💻 GitHub
+              </a>
+              <a class="btn" href="#projects">
+                ✨ View Projects
+              </a>
+            </div>
+
+            <div class="sep"></div>
+
+            <div class="chips" aria-label="Highlights">
+              <span class="chip">Financial modeling</span>
+              <span class="chip">Analytics & dashboards</span>
+              <span class="chip">Strategy & research</span>
+              <span class="chip">Python / Excel / SQL</span>
+              <span class="chip">Presentation storytelling</span>
+            </div>
+          </section>
+
+          <aside class="card heroSide" aria-label="Profile">
+            <div class="pfp">
+              Replace with your photo:
+              <br />
+              <span class="tiny">/assets/headshot.jpg</span>
+            </div>
+
+            <div class="meta">
+              <div class="metaRow">
+                <span>Role</span><b id="role">MBA Candidate • Analytics</b>
+              </div>
+              <div class="metaRow">
+                <span>Focus</span><b id="focus">Corporate Finance • ML • BI</b>
+              </div>
+              <div class="metaRow">
+                <span>Email</span>
+                <b><a id="emailLink" href="mailto:you@email.com">you@email.com</a></b>
+              </div>
+              <div class="metaRow">
+                <span>Open to</span><b id="openTo">Full-time • May 2026</b>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about">
+          <div class="sectionHead">
+            <h2>About</h2>
+            <p>A short story + what I’m optimizing for.</p>
+          </div>
+          <div class="card panel">
+            <p class="note" id="aboutText">
+              I’m a data-driven professional who loves connecting numbers to real-world outcomes. Recently I’ve worked on budgeting, forecasting, and analytics projects — and I enjoy building clean dashboards and investor-ready narratives.
+              <br /><br />
+              Outside of work, I’m into entrepreneurship, content, and systems thinking.
+            </p>
+            <div class="chips">
+              <span class="badge"><i></i> Seeking roles in: FP&A / Strategy / Analytics</span>
+              <span class="badge"><i></i> Strengths: structured thinking + storytelling</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+          <div class="sectionHead">
+            <h2>Experience</h2>
+            <p>Impact-focused highlights (replace with your real roles).</p>
+          </div>
+
+          <div class="grid2">
+            <div class="item">
+              <div class="itemTop">
+                <b>Company — Title</b>
+                <span>Month YYYY – Month YYYY</span>
+              </div>
+              <span class="tiny" style="color:var(--muted)">Location • Team</span>
+              <ul>
+                <li>Built / analyzed X that improved Y by Z%.</li>
+                <li>Automated reporting with Python/Excel, saving ~N hours/week.</li>
+                <li>Partnered with stakeholders to drive decision on A/B/C.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">FP&A</span><span class="chip">Excel</span><span class="chip">Stakeholder mgmt</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="itemTop">
+                <b>Company — Title</b>
+                <span>Month YYYY – Month YYYY</span>
+              </div>
+              <span class="tiny" style="color:var(--muted)">Location • Team</span>
+              <ul>
+                <li>Owned weekly KPI dashboard and insights readout.</li>
+                <li>Created model to evaluate scenario outcomes (NPV, sensitivity).</li>
+                <li>Produced executive-ready slides for leadership updates.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Dashboards</span><span class="chip">Modeling</span><span class="chip">Slides</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+          <div class="sectionHead">
+            <h2>Projects</h2>
+            <p>Selected work: analytics, strategy, or builds.</p>
+          </div>
+
+          <div class="grid3">
+            <div class="item">
+              <div class="itemTop">
+                <b>Project Name</b>
+                <span class="tiny">Case study</span>
+              </div>
+              <p>
+                One-liner explaining what it is and why it matters.
+              </p>
+              <ul>
+                <li>Key metric/insight/result</li>
+                <li>Tooling: Python / SQL / Power BI</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">Analytics</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="itemTop">
+                <b>Project Name</b>
+                <span class="tiny">Dashboard</span>
+              </div>
+              <p>
+                What you built and who it helped.
+              </p>
+              <ul>
+                <li>Automated data pipeline or reporting flow</li>
+                <li>Decision enabled (pricing, ops, budget, etc.)</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">BI</span><span class="chip">Excel</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="itemTop">
+                <b>Project Name</b>
+                <span class="tiny">Research</span>
+              </div>
+              <p>
+                Short description + outcome (recommendation, memo, strategy).
+              </p>
+              <ul>
+                <li>Framework used (issue tree, TAM/SAM/SOM, etc.)</li>
+                <li>Deliverable: deck + summary memo</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Strategy</span><span class="chip">Slides</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS + EDUCATION -->
+        <section id="skills">
+          <div class="sectionHead">
+            <h2>Skills</h2>
+            <p>What I use day-to-day.</p>
+          </div>
+
+          <div class="grid2">
+            <div class="card panel">
+              <b>Tools</b>
+              <div class="chips">
+                <span class="chip">Excel</span>
+                <span class="chip">PowerPoint</span>
+                <span class="chip">Power BI / Tableau</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Python</span>
+              </div>
+              <div class="sep"></div>
+              <b>Domains</b>
+              <div class="chips">
+                <span class="chip">FP&A</span>
+                <span class="chip">Corporate Finance</span>
+                <span class="chip">Market research</span>
+                <span class="chip">Operations analytics</span>
+                <span class="chip">VC/Startup analysis</span>
+              </div>
+            </div>
+
+            <div class="card panel">
+              <b>Education</b>
+              <div class="sep"></div>
+              <div class="item" style="padding:14px">
+                <div class="itemTop">
+                  <b>School — Degree</b>
+                  <span>Year</span>
+                </div>
+                <p class="note">Relevant coursework: analytics, finance, strategy, ML, etc.</p>
+                <div class="chips">
+                  <span class="chip">Honors / Clubs</span>
+                  <span class="chip">Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <div class="sectionHead">
+            <h2>Contact</h2>
+            <p>Quick way to reach me.</p>
+          </div>
+
+          <div class="contactGrid">
+            <div class="card panel">
+              <b>Send a message</b>
+              <p class="note">This form copies an email template for you (no backend required).</p>
+
+              <div class="field">
+                <label for="cname">Your name</label>
+                <input id="cname" placeholder="Jane Doe" />
+              </div>
+
+              <div class="field">
+                <label for="cemail">Your email</label>
+                <input id="cemail" placeholder="jane@email.com" />
+              </div>
+
+              <div class="field">
+                <label for="cmsg">Message</label>
+                <textarea id="cmsg" placeholder="Hi — I’d love to connect about..."></textarea>
+              </div>
+
+              <div class="heroActions" style="margin-top:12px">
+                <button class="btn btnPrimary" id="copyEmailBtn" type="button">📩 Copy email message</button>
+                <a class="btn" id="mailtoBtn" href="#">Open in email app</a>
+              </div>
+
+              <p class="note tiny" style="margin-top:10px">
+                Tip: If you want a real form that submits to you, I can wire this to Formspree or Netlify Forms in 2 minutes.
+              </p>
+            </div>
+
+            <div class="card panel">
+              <b>Links</b>
+              <div class="sep"></div>
+              <div class="item">
+                <div class="itemTop">
+                  <b>Email</b>
+                  <span class="tiny"><a id="emailLink2" href="mailto:you@email.com">you@email.com</a></span>
+                </div>
+                <p class="note">Best for opportunities, intros, or project collabs.</p>
+              </div>
+
+              <div class="item" style="margin-top:12px">
+                <div class="itemTop">
+                  <b>LinkedIn</b>
+                  <span class="tiny"><a id="linkedinBtn2" href="#" target="_blank" rel="noreferrer">Profile</a></span>
+                </div>
+                <p class="note">Let’s connect — happy to chat.</p>
+              </div>
+
+              <div class="item" style="margin-top:12px">
+                <div class="itemTop">
+                  <b>GitHub / Portfolio</b>
+                  <span class="tiny"><a id="githubBtn2" href="#" target="_blank" rel="noreferrer">Projects</a></span>
+                </div>
+                <p class="note">Code, dashboards, and experiments.</p>
+              </div>
+
+              <div class="sep"></div>
+              <span class="tiny" style="color:var(--muted)">
+                © <span id="year"></span> <span id="name2">Your Name</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer">
+          <span>Built with simple HTML/CSS — fast, elegant, and deployable anywhere.</span>
+          <span class="tiny">Press <b>Cmd/Ctrl + F</b> to quickly update your placeholders.</span>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast">Copied!</div>
+
+    <script>
+      // ---- EDIT THESE (quick config) ----
+      const profile = {
+        name: "Your Name",
+        location: "Boston, MA",
+        role: "MBA Candidate • Analytics",
+        focus: "Corporate Finance • ML • BI",
+        openTo: "Full-time • May 2026",
+        email: "you@email.com",
+        linkedin: "https://www.linkedin.com/in/your-handle/",
+        github: "https://github.com/your-handle",
+        resumePdfUrl: "#", // e.g. "assets/YourName_Resume.pdf"
+        headline:
+          "I turn messy data into decisions — dashboards, models, and clear strategy. Here you’ll find my work, experience, and how to reach me.",
+        about:
+          "I’m a data-driven professional who loves connecting numbers to real-world outcomes. Recently I’ve worked on budgeting, forecasting, and analytics projects — and I enjoy building clean dashboards and investor-ready narratives.\n\nOutside of work, I’m into entrepreneurship, content, and systems thinking."
+      };
+
+      // ---- Bind profile to the page ----
+      const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+      const setHref = (id, value) => { const el = document.getElementById(id); if (el) el.href = value; };
+
+      setText("brandName", profile.name);
+      setText("name", profile.name);
+      setText("name2", profile.name);
+      setText("location", profile.location);
+      setText("role", profile.role);
+      setText("focus", profile.focus);
+      setText("openTo", profile.openTo);
+      setText("headline", profile.headline);
+      setText("aboutText", profile.about);
+
+      setHref("emailLink", `mailto:${profile.email}`);
+      setHref("emailLink2", `mailto:${profile.email}`);
+      document.getElementById("emailLink").textContent = profile.email;
+      document.getElementById("emailLink2").textContent = profile.email;
+
+      setHref("linkedinBtn", profile.linkedin);
+      setHref("linkedinBtn2", profile.linkedin);
+      setHref("githubBtn", profile.github);
+      setHref("githubBtn2", profile.github);
+
+      const resumeBtn = document.getElementById("resumeBtn");
+      resumeBtn.href = profile.resumePdfUrl;
+      if (profile.resumePdfUrl === "#") {
+        resumeBtn.removeAttribute("download");
+        resumeBtn.textContent = "⬇️ Add your resume PDF link";
+      }
+
+      setText("year", new Date().getFullYear());
+
+      // ---- Contact helpers (no backend) ----
+      const toast = document.getElementById("toast");
+      const showToast = (msg) => {
+        toast.textContent = msg;
+        toast.style.display = "block";
+        clearTimeout(window.__t);
+        window.__t = setTimeout(() => (toast.style.display = "none"), 1600);
+      };
+
+      const buildEmailBody = () => {
+        const name = document.getElementById("cname").value.trim();
+        const email = document.getElementById("cemail").value.trim();
+        const msg = document.getElementById("cmsg").value.trim();
+        const lines = [
+          `Hi ${profile.name},`,
+          "",
+          msg || "(write your message here)",
+          "",
+          `— ${name || "Your Name"}${email ? ` (${email})` : ""}`
+        ];
+        return lines.join("\n");
+      };
+
+      document.getElementById("copyEmailBtn").addEventListener("click", async () => {
+        const body = buildEmailBody();
+        try{
+          await navigator.clipboard.writeText(body);
+          showToast("Copied email message");
+        }catch{
+          showToast("Copy failed (browser blocked)");
+        }
+      });
+
+      document.getElementById("mailtoBtn").addEventListener("click", (e) => {
+        e.preventDefault();
+        const subject = encodeURIComponent(`Hello ${profile.name} — quick intro`);
+        const body = encodeURIComponent(buildEmailBody());
+        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+      });
+    </script>
+  </body>
+</html>
