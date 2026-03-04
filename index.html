@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personal website showcasing professional work, projects, and contact details." />
+    <meta
+      name="description"
+      content="Rajat Kumar — finance + analytics portfolio. Projects, experience, resume, and contact."
+    />
     <title>Rajat Kumar — Portfolio</title>
+
     <style>
       :root{
         --bg: #0b1020;
@@ -121,6 +125,7 @@
         background:rgba(255,255,255,.06);
         color:var(--text);
         font-weight:650;
+        cursor:pointer;
       }
       .btn:hover{background:rgba(255,255,255,.09)}
       .btnPrimary{
@@ -143,6 +148,16 @@
         color:rgba(255,255,255,.78);
         font-family:var(--mono);
         text-align:center;
+        padding:0;
+        overflow:hidden;
+      }
+      .pfp img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        display:block;
+      }
+      .pfpPlaceholder{
         padding:18px;
       }
       .meta{
@@ -278,7 +293,7 @@
         <!-- HERO -->
         <div class="hero">
           <section class="card heroMain" aria-label="Intro">
-            <span class="kicker">👋 Available for MBA internships / full-time • <span id="location">Boston, MA</span></span>
+            <span class="kicker">👋 Available for internships / full-time • <span id="location">Boston, MA</span></span>
             <h1>
               I’m <span id="name">Rajat Kumar</span> —
               <br />
@@ -318,10 +333,13 @@
           </section>
 
           <aside class="card heroSide" aria-label="Profile">
+            <!-- If you upload headshot.jpg to the repo root, it will show here. -->
             <div class="pfp">
-              Replace with your photo:
-              <br />
-              <span class="tiny">/assets/headshot.jpg</span>
+              <img id="headshotImg" src="headshot.jpg" alt="Rajat Kumar headshot"
+                   onerror="this.style.display='none'; document.getElementById('pfpFallback').style.display='block';" />
+              <div id="pfpFallback" class="pfpPlaceholder" style="display:none;">
+                Upload a photo named <b>headshot.jpg</b> to your GitHub repo (same folder as index.html).
+              </div>
             </div>
 
             <div class="meta">
@@ -329,11 +347,11 @@
                 <span>Role</span><b id="role">MBA Candidate • Analytics</b>
               </div>
               <div class="metaRow">
-                <span>Focus</span><b id="focus">Corporate Finance • ML • BI</b>
+                <span>Focus</span><b id="focus">Corporate Finance • FP&A • BI</b>
               </div>
               <div class="metaRow">
                 <span>Email</span>
-                <b><a id="emailLink" href="mailto:rajktinjani@email.com">rajktinjani@gmail.com</a></b>
+                <b><a id="emailLink" href="mailto:rajktinjani@gmail.com">rajktinjani@gmail.com</a></b>
               </div>
               <div class="metaRow">
                 <span>Open to</span><b id="openTo">Full-time • May 2026</b>
@@ -365,36 +383,36 @@
         <section id="experience">
           <div class="sectionHead">
             <h2>Experience</h2>
-            <p>Impact-focused highlights (replace with your real roles).</p>
+            <p>Replace with your real roles (you can keep the format).</p>
           </div>
 
           <div class="grid2">
             <div class="item">
               <div class="itemTop">
-                <b>Company — Title</b>
-                <span>Month YYYY – Month YYYY</span>
+                <b>Analysis Group — Accounts Payable Intern</b>
+                <span>2025 – Present</span>
               </div>
-              <span class="tiny" style="color:var(--muted)">Location • Team</span>
+              <span class="tiny" style="color:var(--muted)">Boston, MA • Corporate Finance</span>
               <ul>
-                <li>Built / analyzed X that improved Y by Z%.</li>
-                <li>Automated reporting with Python/Excel, saving ~N hours/week.</li>
-                <li>Partnered with stakeholders to drive decision on A/B/C.</li>
+                <li>Supported AP operations, vendor inquiries, and payment workflows.</li>
+                <li>Improved tracking and documentation to reduce processing friction.</li>
+                <li>Collaborated across stakeholders to resolve exceptions quickly.</li>
               </ul>
               <div class="chips">
-                <span class="chip">FP&A</span><span class="chip">Excel</span><span class="chip">Stakeholder mgmt</span>
+                <span class="chip">Corporate Finance</span><span class="chip">Excel</span><span class="chip">Operations</span>
               </div>
             </div>
 
             <div class="item">
               <div class="itemTop">
-                <b>Company — Title</b>
+                <b>Project / Internship — Title</b>
                 <span>Month YYYY – Month YYYY</span>
               </div>
               <span class="tiny" style="color:var(--muted)">Location • Team</span>
               <ul>
-                <li>Owned weekly KPI dashboard and insights readout.</li>
-                <li>Created model to evaluate scenario outcomes (NPV, sensitivity).</li>
-                <li>Produced executive-ready slides for leadership updates.</li>
+                <li>Built a KPI dashboard or financial model to support decisions.</li>
+                <li>Performed analysis (budgeting, forecasting, scenario planning).</li>
+                <li>Created presentation-ready insights and recommendations.</li>
               </ul>
               <div class="chips">
                 <span class="chip">Dashboards</span><span class="chip">Modeling</span><span class="chip">Slides</span>
@@ -407,21 +425,19 @@
         <section id="projects">
           <div class="sectionHead">
             <h2>Projects</h2>
-            <p>Selected work: analytics, strategy, or builds.</p>
+            <p>Selected work (swap these with your best 3–6).</p>
           </div>
 
           <div class="grid3">
             <div class="item">
               <div class="itemTop">
-                <b>Project Name</b>
-                <span class="tiny">Case study</span>
+                <b>Portfolio Project 1</b>
+                <span class="tiny">Analytics</span>
               </div>
-              <p>
-                One-liner explaining what it is and why it matters.
-              </p>
+              <p>Short 1–2 line description of the problem and what you built.</p>
               <ul>
-                <li>Key metric/insight/result</li>
-                <li>Tooling: Python / SQL / Power BI</li>
+                <li>Result / insight (e.g., improved decision speed, key KPI trend).</li>
+                <li>Tools: Python / SQL / Excel / Power BI</li>
               </ul>
               <div class="chips">
                 <span class="chip">Python</span><span class="chip">Analytics</span>
@@ -430,32 +446,28 @@
 
             <div class="item">
               <div class="itemTop">
-                <b>Project Name</b>
-                <span class="tiny">Dashboard</span>
+                <b>Portfolio Project 2</b>
+                <span class="tiny">Finance</span>
               </div>
-              <p>
-                What you built and who it helped.
-              </p>
+              <p>Short 1–2 line description of the model or analysis you created.</p>
               <ul>
-                <li>Automated data pipeline or reporting flow</li>
-                <li>Decision enabled (pricing, ops, budget, etc.)</li>
+                <li>Scenario modeling / forecasting / sensitivity analysis.</li>
+                <li>Deliverable: deck + summary memo</li>
               </ul>
               <div class="chips">
-                <span class="chip">BI</span><span class="chip">Excel</span>
+                <span class="chip">Modeling</span><span class="chip">Excel</span>
               </div>
             </div>
 
             <div class="item">
               <div class="itemTop">
-                <b>Project Name</b>
-                <span class="tiny">Research</span>
+                <b>Portfolio Project 3</b>
+                <span class="tiny">Strategy</span>
               </div>
-              <p>
-                Short description + outcome (recommendation, memo, strategy).
-              </p>
+              <p>Short 1–2 line description of the research and recommendation.</p>
               <ul>
-                <li>Framework used (issue tree, TAM/SAM/SOM, etc.)</li>
-                <li>Deliverable: deck + summary memo</li>
+                <li>Frameworks: issue trees, market sizing, competitive analysis.</li>
+                <li>Outcome: recommendation + roadmap</li>
               </ul>
               <div class="chips">
                 <span class="chip">Strategy</span><span class="chip">Slides</span>
@@ -486,9 +498,9 @@
               <div class="chips">
                 <span class="chip">FP&A</span>
                 <span class="chip">Corporate Finance</span>
+                <span class="chip">Analytics</span>
                 <span class="chip">Market research</span>
-                <span class="chip">Operations analytics</span>
-                <span class="chip">VC/Startup analysis</span>
+                <span class="chip">Operations</span>
               </div>
             </div>
 
@@ -497,13 +509,13 @@
               <div class="sep"></div>
               <div class="item" style="padding:14px">
                 <div class="itemTop">
-                  <b>School — Degree</b>
-                  <span>Year</span>
+                  <b>Babson College — MBA (Machine Learning & Business Analytics)</b>
+                  <span>May 2026</span>
                 </div>
-                <p class="note">Relevant coursework: analytics, finance, strategy, ML, etc.</p>
+                <p class="note">Relevant coursework: corporate finance, analytics, ML, operations, strategy.</p>
                 <div class="chips">
-                  <span class="chip">Honors / Clubs</span>
                   <span class="chip">Leadership</span>
+                  <span class="chip">Projects</span>
                 </div>
               </div>
             </div>
@@ -534,7 +546,7 @@
 
               <div class="field">
                 <label for="cmsg">Message</label>
-                <textarea id="cmsg" placeholder="Hi — I’d love to connect about..."></textarea>
+                <textarea id="cmsg" placeholder="Hi Rajat — I’d love to connect about..."></textarea>
               </div>
 
               <div class="heroActions" style="margin-top:12px">
@@ -543,7 +555,7 @@
               </div>
 
               <p class="note tiny" style="margin-top:10px">
-                Tip: If you want a real form that submits to you, I can wire this to Formspree or Netlify Forms in 2 minutes.
+                Tip: If you want a real form that submits to you, we can connect this to Formspree or Netlify Forms.
               </p>
             </div>
 
@@ -553,7 +565,7 @@
               <div class="item">
                 <div class="itemTop">
                   <b>Email</b>
-                  <span class="tiny"><a id="emailLink2" href="mailto:you@email.com">you@email.com</a></span>
+                  <span class="tiny"><a id="emailLink2" href="mailto:rajktinjani@gmail.com">rajktinjani@gmail.com</a></span>
                 </div>
                 <p class="note">Best for opportunities, intros, or project collabs.</p>
               </div>
@@ -568,7 +580,7 @@
 
               <div class="item" style="margin-top:12px">
                 <div class="itemTop">
-                  <b>GitHub / Portfolio</b>
+                  <b>GitHub</b>
                   <span class="tiny"><a id="githubBtn2" href="#" target="_blank" rel="noreferrer">Projects</a></span>
                 </div>
                 <p class="note">Code, dashboards, and experiments.</p>
@@ -576,7 +588,7 @@
 
               <div class="sep"></div>
               <span class="tiny" style="color:var(--muted)">
-                © <span id="year"></span> <span id="name2">Your Name</span>
+                © <span id="year"></span> <span id="name2">Rajat Kumar</span>
               </span>
             </div>
           </div>
@@ -584,7 +596,7 @@
 
         <div class="footer">
           <span>Built with simple HTML/CSS — fast, elegant, and deployable anywhere.</span>
-          <span class="tiny">Press <b>Cmd/Ctrl + F</b> to quickly update your placeholders.</span>
+          <span class="tiny">Edit <b>index.html</b> in GitHub to update the live site.</span>
         </div>
       </main>
     </div>
@@ -592,24 +604,30 @@
     <div class="toast" id="toast">Copied!</div>
 
     <script>
-      // ---- EDIT THESE (quick config) ----
+      // ✅ EDIT ONLY THIS SECTION (your details)
       const profile = {
-        name: "Your Name",
+        name: "Rajat Kumar",
         location: "Boston, MA",
         role: "MBA Candidate • Analytics",
-        focus: "Corporate Finance • ML • BI",
+        focus: "Corporate Finance • FP&A • BI",
         openTo: "Full-time • May 2026",
-        email: "you@email.com",
-        linkedin: "https://www.linkedin.com/in/your-handle/",
-        github: "https://github.com/your-handle",
-        resumePdfUrl: "#", // e.g. "assets/YourName_Resume.pdf"
+        email: "rajktinjani@gmail.com",
+
+        // Replace with your real URLs:
+        linkedin: "https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/",
+        github: "https://github.com/rajktinjani",
+
+        // Upload your resume PDF to the repo root and name it resume.pdf (or change this)
+        resumePdfUrl: "resume.pdf",
+
         headline:
           "I turn messy data into decisions — dashboards, models, and clear strategy. Here you’ll find my work, experience, and how to reach me.",
+
         about:
-          "I’m a data-driven professional who loves connecting numbers to real-world outcomes. Recently I’ve worked on budgeting, forecasting, and analytics projects — and I enjoy building clean dashboards and investor-ready narratives.\n\nOutside of work, I’m into entrepreneurship, content, and systems thinking."
+          "I’m a data-driven professional who loves connecting numbers to real-world outcomes. I enjoy turning messy data into decisions through dashboards, financial models, and clear strategy narratives.\n\nCurrently, I’m focused on corporate finance, analytics, and business strategy — and I’m always excited about projects at the intersection of finance and technology."
       };
 
-      // ---- Bind profile to the page ----
+      // Bind profile to the page
       const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
       const setHref = (id, value) => { const el = document.getElementById(id); if (el) el.href = value; };
 
@@ -635,14 +653,15 @@
 
       const resumeBtn = document.getElementById("resumeBtn");
       resumeBtn.href = profile.resumePdfUrl;
-      if (profile.resumePdfUrl === "#") {
+      resumeBtn.setAttribute("download", "");
+      if (!profile.resumePdfUrl || profile.resumePdfUrl === "#") {
         resumeBtn.removeAttribute("download");
         resumeBtn.textContent = "⬇️ Add your resume PDF link";
       }
 
       setText("year", new Date().getFullYear());
 
-      // ---- Contact helpers (no backend) ----
+      // Contact helpers (no backend)
       const toast = document.getElementById("toast");
       const showToast = (msg) => {
         toast.textContent = msg;
