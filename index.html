@@ -1,1011 +1,1170 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Rajat Kumar — finance + analytics portfolio. Projects, experience, resume, and contact."
-    />
-    <title>Rajat Kumar — Portfolio</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style>
-      :root{
-        --bg: #0b1020;
-        --panel: rgba(255,255,255,.06);
-        --panel2: rgba(255,255,255,.10);
-        --text: rgba(255,255,255,.92);
-        --muted: rgba(255,255,255,.68);
-        --line: rgba(255,255,255,.12);
-        --accent: #7c5cff;
-        --accent2: #2dd4bf;
-        --shadow: 0 12px 40px rgba(0,0,0,.35);
-        --radius: 18px;
-        --max: 1100px;
-        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  <meta
+    name="description"
+    content="Rajat Kumar — strategic finance, FP&A, AI-enabled finance transformation, and analytics."
+  />
+
+  <title>Rajat Kumar | Strategic Finance & AI</title>
+
+  <style>
+    :root {
+      --bg: #07101f;
+      --surface: #ffffff;
+      --soft: #f6f8fc;
+
+      --text: #111827;
+      --light: #f8fafc;
+      --muted: #5f6b7a;
+      --muted-light: #a8b3c7;
+
+      --line: #e4e9f2;
+      --line-dark: rgba(255, 255, 255, 0.12);
+
+      --accent: #2878ff;
+      --accent-soft: rgba(40, 120, 255, 0.12);
+
+      --shadow: 0 24px 70px rgba(6, 16, 31, 0.14);
+      --radius: 28px;
+      --max: 1200px;
+
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--surface);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    .nav-shell {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 16, 31, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--light);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: var(--muted-light);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-cta {
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: #ffffff;
+      background: var(--accent);
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      overflow: hidden;
+      padding: 92px 0 72px;
+      color: var(--light);
+      background:
+        radial-gradient(
+          circle at 78% 20%,
+          rgba(40, 120, 255, 0.23),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 18% 0%,
+          rgba(35, 75, 140, 0.28),
+          transparent 35%
+        ),
+        var(--bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid var(--line-dark);
+      border-radius: 999px;
+      color: #c7d2e5;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(40, 120, 255, 0.13);
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 22px 0 18px;
+      font-size: clamp(3.25rem, 7vw, 6.3rem);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin: 0;
+      color: var(--muted-light);
+      font-size: clamp(1.05rem, 2vw, 1.27rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-weight: 750;
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .button-secondary {
+      color: var(--light);
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--line-dark);
+    }
+
+    .hero-card {
+      min-height: 500px;
+      padding: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line-dark);
+      border-radius: 34px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.03)
+      );
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.33);
+    }
+
+    .portrait {
+      height: 100%;
+      min-height: 458px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(40, 120, 255, 0.23),
+          rgba(255, 255, 255, 0.03)
+        ),
+        #101b30;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait-fallback {
+      padding: 34px;
+      color: #c7d2e5;
+      text-align: center;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .metric strong {
+      display: block;
+      color: #ffffff;
+      font-size: 1.28rem;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted-light);
+      font-size: 0.85rem;
+    }
+
+    /* SHARED SECTIONS */
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.7rem);
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .section-heading p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      background: var(--soft);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      min-height: 380px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: 0 16px 44px rgba(25, 41, 71, 0.07);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 1.45rem;
+    }
+
+    .project-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.65rem;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #445064;
+      background: #f2f5fa;
+      font-size: 0.78rem;
+      font-weight: 650;
+    }
+
+    .project-link {
+      margin-top: 26px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .impact-band {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(3, 1fr);
+      gap: 26px;
+      align-items: center;
+      margin-top: 26px;
+      padding: 30px;
+      border-radius: var(--radius);
+      color: #ffffff;
+      background: var(--bg);
+    }
+
+    .impact-band h3 {
+      margin: 0;
+      font-size: 1.45rem;
+    }
+
+    .impact-number {
+      padding-left: 24px;
+      border-left: 1px solid var(--line-dark);
+    }
+
+    .impact-number strong {
+      display: block;
+      color: var(--accent);
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .impact-number span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted-light);
+      font-size: 0.86rem;
+    }
+
+    /* PHILOSOPHY */
+
+    .philosophy {
+      text-align: center;
+    }
+
+    .philosophy blockquote {
+      max-width: 940px;
+      margin: 0 auto;
+      font-size: clamp(2.15rem, 4vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+    }
+
+    .philosophy blockquote span {
+      color: var(--accent);
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      color: var(--light);
+      background: var(--bg);
+    }
+
+    .experience .section-heading p {
+      color: var(--muted-light);
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .timeline-item .date,
+    .timeline-item .location {
+      color: var(--muted-light);
+      font-size: 0.9rem;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .timeline-item p {
+      max-width: 740px;
+      margin: 8px 0 0;
+      color: var(--muted-light);
+    }
+
+    /* EXPERTISE */
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .expertise-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+    }
+
+    .expertise-card h3 {
+      margin: 0 0 15px;
+    }
+
+    .expertise-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--soft);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+      padding: 48px;
+      border-radius: var(--radius);
+      color: #ffffff;
+      background: var(--bg);
+    }
+
+    .contact-card h2 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .contact-card p {
+      max-width: 620px;
+      color: var(--muted-light);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-link {
+      padding: 14px 16px;
+      border: 1px solid var(--line-dark);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 24px 0;
+      color: var(--muted-light);
+      background: var(--bg);
+      border-top: 1px solid var(--line-dark);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
       }
-      *{box-sizing:border-box}
-      html{scroll-behavior:smooth}
-      body{
-        margin:0;
-        font-family:var(--sans);
-        color:var(--text);
-        background:
-          radial-gradient(1200px 700px at 12% 0%, rgba(124,92,255,.25), transparent 60%),
-          radial-gradient(900px 700px at 88% 10%, rgba(45,212,191,.18), transparent 55%),
-          radial-gradient(900px 700px at 55% 100%, rgba(124,92,255,.12), transparent 55%),
-          var(--bg);
-        min-height:100vh;
+
+      .hero-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
       }
-      a{color:inherit; text-decoration:none}
-      .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 70px}
-      .nav{
-        position:sticky; top:14px; z-index:50;
-        display:flex; align-items:center; justify-content:space-between;
-        padding:12px 14px;
-        background:rgba(10,16,32,.55);
-        border:1px solid var(--line);
-        border-radius:999px;
-        backdrop-filter: blur(12px);
-        box-shadow: var(--shadow);
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
       }
-      .brand{display:flex; gap:10px; align-items:center}
-      .dot{
-        width:10px; height:10px; border-radius:999px;
-        background:linear-gradient(135deg, var(--accent), var(--accent2));
-        box-shadow:0 0 0 6px rgba(124,92,255,.12);
+
+      .project-grid,
+      .expertise-grid {
+        grid-template-columns: 1fr;
       }
-      .brand b{letter-spacing:.2px}
-      .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-      .navlinks a{
-        padding:8px 10px;
-        border-radius:999px;
-        color:var(--muted);
-        font-size:14px;
+
+      .impact-band {
+        grid-template-columns: 1fr 1fr;
       }
-      .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-      .cta{
-        background:linear-gradient(135deg, var(--accent), var(--accent2));
-        color:#061023;
-        padding:9px 12px;
-        border-radius:999px;
-        font-weight:700;
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
       }
-      .cta:hover{filter:brightness(1.05)}
-      .hero{
-        margin-top:26px;
-        display:grid;
-        grid-template-columns: 1.35fr .65fr;
-        gap:18px;
+
+      .timeline-item .location {
+        display: none;
       }
-      @media (max-width: 900px){
-        .hero{grid-template-columns:1fr}
-        .navlinks{display:none}
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
       }
-      .card{
-        background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-        border:1px solid var(--line);
-        border-radius:var(--radius);
-        box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max));
       }
-      .heroMain{padding:26px}
-      .kicker{
-        display:inline-flex; gap:8px; align-items:center;
-        padding:7px 10px;
-        border-radius:999px;
-        background:rgba(255,255,255,.06);
-        border:1px solid var(--line);
-        color:var(--muted);
-        font-family:var(--mono);
-        font-size:12px;
+
+      .hero {
+        padding-top: 68px;
       }
-      h1{
-        margin:14px 0 10px;
-        font-size:44px;
-        line-height:1.05;
-        letter-spacing:-.8px;
+
+      .metrics,
+      .impact-band {
+        grid-template-columns: 1fr;
       }
-      .sub{
-        margin:0;
-        color:var(--muted);
-        font-size:17px;
-        line-height:1.6;
-        max-width:62ch;
+
+      .impact-number {
+        padding-top: 18px;
+        padding-left: 0;
+        border-top: 1px solid var(--line-dark);
+        border-left: 0;
       }
-      .heroActions{
-        display:flex; gap:10px; flex-wrap:wrap;
-        margin-top:18px;
+
+      .contact-card {
+        padding: 30px;
       }
-      .btn{
-        display:inline-flex; align-items:center; gap:10px;
-        padding:11px 14px;
-        border-radius:12px;
-        border:1px solid var(--line);
-        background:rgba(255,255,255,.06);
-        color:var(--text);
-        font-weight:650;
-        cursor:pointer;
-      }
-      .btn:hover{background:rgba(255,255,255,.09)}
-      .btnPrimary{
-        background:linear-gradient(135deg, var(--accent), var(--accent2));
-        color:#061023;
-        border:none;
-      }
-      .btnPrimary:hover{filter:brightness(1.05)}
-      .heroSide{padding:22px}
-      .pfp{
-        width:100%;
-        aspect-ratio: 1 / 1;
-        border-radius:16px;
-        background:
-          radial-gradient(circle at 30% 25%, rgba(255,255,255,.22), transparent 45%),
-          radial-gradient(circle at 70% 85%, rgba(255,255,255,.18), transparent 55%),
-          linear-gradient(135deg, rgba(124,92,255,.35), rgba(45,212,191,.25));
-        border:1px solid var(--line);
-        display:flex; align-items:center; justify-content:center;
-        color:rgba(255,255,255,.78);
-        font-family:var(--mono);
-        text-align:center;
-        padding:0;
-        overflow:hidden;
-      }
-      .pfp img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        display:block;
-      }
-      .pfpPlaceholder{
-        padding:18px;
-      }
-      .meta{
-        margin-top:14px;
-        display:grid;
-        gap:10px;
-      }
-      .metaRow{
-        display:flex; justify-content:space-between; gap:10px;
-        padding:10px 12px;
-        border:1px solid var(--line);
-        border-radius:14px;
-        background:rgba(255,255,255,.04);
-      }
-      .metaRow span{color:var(--muted); font-size:13px}
-      .metaRow b{font-size:13px}
-      section{margin-top:22px}
-      .sectionHead{
-        display:flex; align-items:end; justify-content:space-between; gap:12px;
-        margin:22px 0 10px;
-      }
-      .sectionHead h2{margin:0; font-size:22px; letter-spacing:-.2px}
-      .sectionHead p{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
-      .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-      .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-      @media (max-width: 900px){
-        .grid2,.grid3{grid-template-columns:1fr}
-      }
-      .panel{padding:18px}
-      .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-      .chip{
-        font-family:var(--mono);
-        font-size:12px;
-        padding:6px 8px;
-        border-radius:999px;
-        border:1px solid var(--line);
-        background:rgba(255,255,255,.04);
-        color:rgba(255,255,255,.80);
-      }
-      .item{
-        padding:16px;
-        border:1px solid var(--line);
-        border-radius:16px;
-        background:rgba(255,255,255,.04);
-      }
-      .itemTop{
-        display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
-      }
-      .itemTop b{font-size:15px}
-      .itemTop span{color:var(--muted); font-size:13px}
-      .item p{margin:10px 0 0; color:var(--muted); line-height:1.6}
-      ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.6}
-      .footer{
-        margin-top:26px;
-        padding:18px 18px;
-        border-top:1px solid var(--line);
-        color:var(--muted);
-        display:flex;
-        justify-content:space-between;
-        gap:12px;
-        flex-wrap:wrap;
-        font-size:14px;
-      }
-      .tiny{font-family:var(--mono); font-size:12px}
-      .sep{height:1px; background:var(--line); margin:14px 0}
-      .badge{
-        display:inline-flex; align-items:center; gap:8px;
-        padding:7px 10px;
-        border-radius:999px;
-        border:1px solid var(--line);
-        background:rgba(255,255,255,.04);
-        color:var(--muted);
-        font-size:13px;
-      }
-      .badge i{
-        width:9px; height:9px; border-radius:999px;
-        background:var(--accent2);
-        box-shadow:0 0 0 6px rgba(45,212,191,.12);
-      }
-      .contactGrid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px}
-      @media (max-width: 900px){.contactGrid{grid-template-columns:1fr}}
-      .field{
-        display:grid; gap:6px; margin-top:10px
-      }
-      label{font-size:13px; color:var(--muted)}
-      input, textarea{
-        width:100%;
-        padding:12px 12px;
-        border-radius:12px;
-        border:1px solid var(--line);
-        background:rgba(255,255,255,.04);
-        color:var(--text);
-        font:inherit;
-      }
-      textarea{min-height:120px; resize:vertical}
-      .note{color:var(--muted); font-size:13px; line-height:1.55}
-      .toast{
-        position:fixed;
-        bottom:16px; left:50%;
-        transform:translateX(-50%);
-        padding:10px 12px;
-        border-radius:999px;
-        border:1px solid var(--line);
-        background:rgba(10,16,32,.72);
-        backdrop-filter: blur(10px);
-        color:var(--text);
-        box-shadow: var(--shadow);
-        display:none;
-        font-size:13px;
-      }
-      /* ===== Projects polish (recruiter-grade) ===== */
+    }
+  </style>
+</head>
 
-.item{
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:18px;
-  padding:18px;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  box-shadow:0 10px 30px rgba(0,0,0,.18);
-}
+<body>
+  <!-- NAVIGATION -->
 
-.item:hover{
-  transform:translateY(-4px);
-  border-color:rgba(124,92,255,.45);
-  box-shadow:0 14px 44px rgba(0,0,0,.28);
-}
+  <header class="nav-shell">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        RAJAT <span>KUMAR</span>
+      </a>
 
-.icon{
-  width:42px;
-  height:42px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:14px;
-  background:rgba(124,92,255,.14);
-  border:1px solid rgba(124,92,255,.25);
-  font-size:18px;
-}
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#experience">Experience</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-.subline{
-  margin-top:6px;
-  color:rgba(255,255,255,.68);
-  font-size:13px;
-}
-
-.metaRow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:12px 0;
-}
-
-.pill{
-  font-size:12px;
-  color:rgba(255,255,255,.86);
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
-  padding:6px 10px;
-  border-radius:999px;
-}
-
-.actions{
-  display:flex;
-  gap:10px;
-  margin-top:14px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  text-decoration:none;
-  color:rgba(255,255,255,.92);
-  background:rgba(255,255,255,.06);
-}
-
-.btn:hover{
-  background:rgba(255,255,255,.09);
-}
-
-.btn.primary{
-  background:rgba(124,92,255,.22);
-  border-color:rgba(124,92,255,.38);
-}
-    /* ===== Portfolio / Work Section ===== */
-.section {
-  padding: 64px 0;
-}
-
-.section-head {
-  display: flex;
-  gap: 16px;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-size: 26px;
-  letter-spacing: 0.2px;
-}
-
-.muted {
-  color: rgba(255,255,255,.68);
-}
-
-/* Grid */
-.grid {
-  display: grid;
-  gap: 18px;
-}
-
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-@media (max-width: 920px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card */
-.card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.25);
-}
-
-.card-top {
-  display: grid;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.card-title h3 {
-  margin: 0 0 4px 0;
-  font-size: 18px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.tag {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-}
-
-/* Bullets */
-.bullets {
-  margin: 10px 0 14px 18px;
-  color: rgba(255,255,255,.86);
-}
-
-.bullets li {
-  margin: 6px 0;
-}
-
-/* Buttons */
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
-  margin-bottom: 14px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.14);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.btn-primary {
-  background: rgba(124, 92, 255, .18); /* matches your --accent vibe */
-}
-
-.btn-ghost {
-  background: rgba(255,255,255,.04);
-}
-
-/* Viewer */
-.viewer {
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-}
-
-.viewer iframe {
-  width: 100%;
-  height: 70vh;
-  border: 0;
-}
-
-.placeholder {
-  border-radius: 14px;
-  border: 1px dashed rgba(255,255,255,.18);
-  background: rgba(255,255,255,.03);
-  padding: 14px;
-}
-    /* === Upgrade 1: Premium hover + subtle motion === */
-.card {
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
-  will-change: transform;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(124, 92, 255, .35);
-  box-shadow: 0 20px 50px rgba(0,0,0,.35);
-  background: rgba(255,255,255,.07);
-}
-
-.tag {
-  transition: border-color .18s ease, transform .18s ease;
-}
-
-.card:hover .tag {
-  border-color: rgba(45, 212, 191, .35);
-  transform: translateY(-1px);
-}
-
-.btn {
-  transition: transform .14s ease, border-color .14s ease, background .14s ease, box-shadow .14s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-  border-color: rgba(255,255,255,.22);
-  box-shadow: 0 12px 24px rgba(0,0,0,.25);
-}
-    /* === Upgrade 2: Key takeaway callout === */
-.takeaway {
-  margin: 10px 0 12px 0;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(124, 92, 255, .10);
-  color: rgba(255,255,255,.90);
-}
-
-.takeaway strong {
-  color: rgba(255,255,255,.98);
-}
-    </style>
-  </head>
-
-  <body>
-    <div class="wrap">
-      <header class="nav">
-        <div class="brand">
-          <div class="dot"></div>
-          <b id="brandName">Rajat Kumar</b>
-        </div>
-        <nav class="navlinks" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-          <a class="cta" href="#contact">Let’s talk</a>
-        </nav>
-        <a class="cta" href="#contact">Contact</a>
-      </header>
-
-      <main>
-        <!-- HERO -->
-        <div class="hero">
-          <section class="card heroMain" aria-label="Intro">
-            <span class="kicker">👋 Available for internships / full-time • <span id="location">Boston, MA</span></span>
-            <h1>
-              I’m <span id="name">Rajat Kumar</span> —
-              <br />
-              <span style="background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent;">
-                finance + analytics
-              </span>
-              focused builder.
-            </h1>
-            <p class="sub" id="headline">
-              I turn messy data into decisions — dashboards, models, and clear strategy. Here you’ll find my work, experience, and how to reach me.
-            </p>
-
-            <div class="heroActions">
-              <a class="btn btnPrimary" id="resumeBtn" href="#" download>
-                ⬇️ Download Resume (PDF)
-              </a>
-              <a class="btn" id="linkedinBtn" href="#" target="_blank" rel="noreferrer">
-                🔗 LinkedIn
-              </a>
-              <a class="btn" id="githubBtn" href="#" target="_blank" rel="noreferrer">
-                💻 GitHub
-              </a>
-              <a class="btn" href="#projects">
-                ✨ View Projects
-              </a>
-            </div>
-
-            <div class="sep"></div>
-
-            <div class="chips" aria-label="Highlights">
-              <span class="chip">Financial modeling</span>
-              <span class="chip">Analytics & dashboards</span>
-              <span class="chip">Strategy & research</span>
-              <span class="chip">Python / Excel / SQL</span>
-              <span class="chip">Presentation storytelling</span>
-            </div>
-          </section>
-
-          <aside class="card heroSide" aria-label="Profile">
-            <!-- If you upload headshot.jpg to the repo root, it will show here. -->
-            <div class="pfp">
-              <img id="headshotImg" src="headshot.jpg" alt="Rajat Kumar headshot"
-                   onerror="this.style.display='none'; document.getElementById('pfpFallback').style.display='block';" />
-              <div id="pfpFallback" class="pfpPlaceholder" style="display:none;">
-                Upload a photo named <b>headshot.jpg</b> to your GitHub repo (same folder as index.html).
-              </div>
-            </div>
-
-            <div class="meta">
-              <div class="metaRow">
-                <span>Role</span><b id="role">MBA Candidate • Analytics</b>
-              </div>
-              <div class="metaRow">
-                <span>Focus</span><b id="focus">Corporate Finance • FP&A • BI</b>
-              </div>
-              <div class="metaRow">
-                <span>Email</span>
-                <b><a id="emailLink" href="mailto:rajktinjani@gmail.com">rajktinjani@gmail.com</a></b>
-              </div>
-              <div class="metaRow">
-                <span>Open to</span><b id="openTo">Full-time • May 2026</b>
-              </div>
-            </div>
-          </aside>
-        </div>
-
-        <!-- ABOUT -->
-        <section id="about">
-          <div class="sectionHead">
-            <h2>About</h2>
-          </div>
-          <div class="card panel">
-            <p class="note" id="aboutText">
-              I’m a data-driven professional who loves connecting numbers to real-world outcomes. Recently I’ve worked on budgeting, forecasting, and analytics projects — and I enjoy building clean dashboards and investor-ready narratives.
-              <br /><br />
-              Outside of work, I’m into entrepreneurship, content, and systems thinking.
-            </p>
-            <div class="chips">
-              <span class="badge"><i></i> Seeking roles in: FP&A / Strategy / Analytics</span>
-              <span class="badge"><i></i> Strengths: structured thinking + storytelling</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-          <div class="sectionHead">
-            <h2>Experience</h2>
-          </div>
-
-          <div class="grid2">
-            <div class="item">
-              <div class="itemTop">
-                <b>LGC Clinical Diagnostics — Senior FP&A Analyst</b>
-                <span>2025 – Present</span>
-              </div>
-              <span class="tiny" style="color:var(--muted)">Milford, MA • Corporate Finance</span>
-              <ul>
-                <li>Partner with senior leadership to support $160M+ in revenue planning, delivering forecasting insights across revenue, COGS, labor, and operating expenses.</li>
-                <li>Lead gross margin analytics, isolating price, volume, and product-mix drivers to identify profitability opportunities and inform go-to-market strategy.</li>
-                <li>Built a top-down forecasting model in Business Objects and automated reporting with Excel macros, reducing reporting cycle time by ~40%.</li>
-              </ul>
-              <div class="chips">
-                <span class="chip">Corporate Finance</span><span class="chip">Excel</span><span class="chip">Operations</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="itemTop">
-                <b>Epsilon</b>
-                <span>Oct 2022 – Mar 2025</span>
-              </div>
-              <span class="tiny" style="color:var(--muted)">Location • Team</span>
-              <ul>
-                <li>Partnered with the CMO, CTO, and CPO by delivering financial analyses and presentations that shaped strategic decisions; managed ~$40M in multi-unit operating expenses and workforce planning; reconciled severance to reduce financial risk by ~15%; and enhanced revenue visibility by automating dashboards, cutting reporting time and improving accuracy across territories</li>
-              </ul>
-              <div class="chips">
-                <span class="chip">Dashboards</span><span class="chip">Modeling</span><span class="chip">Slides</span>
-              </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-          <div class="sectionHead">
-            <h2>Projects</h2>
-            <p>Selected work.</p>
-          </div>
-
-          <div class="item featured">
-  <div class="itemTop">
-    <div class="itemTitle">
-      <div>
-        <b>Babson Consulting Group — Eqwow Ventures</b>
-        <div class="subline">Strategy Consulting • Venture Ecosystem Research • Investor Narrative</div>
-      </div>
+      <a
+        class="nav-cta"
+        href="resume.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Resume
+      </a>
     </div>
-    <span class="tiny">Featured</span>
-  </div>
+  </header>
 
-  <div class="metaRow">
-    <span class="pill">Client: Eqwow Ventures</span>
-    <span class="pill">Focus: Portugal ecosystem</span>
-    <span class="pill">Output: investor-ready deck</span>
-  </div>
+  <main id="top">
+    <!-- HERO -->
 
-  <p>
-    Collaborated with Eqwow Ventures through Babson’s consulting program to support the firm’s international expansion strategy.
-    Conducted market and ecosystem analysis on Portugal’s innovation landscape, evaluating venture capital activity, founder profiles,
-    and cross-border investment trends. Developed strategic insights and investor-focused materials to help position Portugal as a
-    technology and venture hub connecting the United States, Europe, and Latin America.
-  </p>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Strategic Finance • AI • Transformation
+            </span>
 
-  <ul>
-    <li><strong>Market + ecosystem scan:</strong> synthesized startup, VC, and talent signals into an investor-friendly storyline.</li>
-    <li><strong>Benchmarking:</strong> compared key hubs and highlighted Portugal’s positioning on cost efficiency + international connectivity.</li>
-    <li><strong>Deliverables:</strong> produced slide-ready insights and narrative structure for an expansion thesis.</li>
-  </ul>
+            <h1>
+              Building the future of
+              <span>FP&amp;A.</span>
+            </h1>
 
-  <div class="chips">
-    <span class="chip">PitchBook</span>
-    <span class="chip">Benchmarking</span>
-    <span class="chip">Ecosystem research</span>
-    <span class="chip">Storytelling</span>
-  </div>
+            <p class="hero-copy">
+              I partner with business leaders to improve financial decisions
+              through forecasting, workforce intelligence, automation, and
+              AI-enabled finance solutions.
+            </p>
 
-  <div class="actions">
-    <a class="btn primary" href="#contact">Request case study</a>
-    <a class="btn" target="_blank" rel="noopener noreferrer"
-       href="https://www.linkedin.com/posts/monicablatyta_entrepreneurshipeducation-eqwowventures-activity-7418010623671705600-Lhon">
-      Proof / Post
-    </a>
-  </div>
-</div>
-           <section id="work" class="section">
-  <div class="section-head">
-    <h2>Selected Work</h2>
-    <p class="muted">
-      A few projects across valuation, strategy, and analytics.
-    </p>
-  </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">
+                Explore My Work →
+              </a>
 
-  <div class="grid grid-2">
+              <a
+                class="button button-secondary"
+                href="resume.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Download Resume
+              </a>
 
-    <!-- PROJECT CARD: Palantir -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-title">
-          <h3>Palantir Stock Valuation</h3>
-          <p class="muted">Discounted FCFF model • sensitivity analysis • relative multiples</p>
-          <p class="takeaway">
-  Key takeaway: intrinsic value ≈ <strong>$16/share</strong> vs market ≈ <strong>$154</strong>, implying a significant valuation premium.
-</p>
+              <a
+                class="button button-secondary"
+                href="https://www.linkedin.com/in/rajat-kumar-tinjani/"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="portrait">
+              <img
+                src="headshot.jpg"
+                alt="Rajat Kumar"
+                onerror="
+                  this.style.display='none';
+                  document.getElementById('portraitFallback').style.display='block';
+                "
+              />
+
+              <div
+                id="portraitFallback"
+                class="portrait-fallback"
+                style="display: none;"
+              >
+                Add a professional photo named
+                <strong>headshot.jpg</strong>
+                to the same folder as your index.html file.
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="tags">
-          <span class="tag">DCF</span>
-          <span class="tag">WACC (CAPM)</span>
-          <span class="tag">Equity Research</span>
+        <div class="metrics">
+          <div class="metric">
+            <strong>8+ Years</strong>
+            <span>Finance experience</span>
+          </div>
+
+          <div class="metric">
+            <strong>$160M+</strong>
+            <span>Revenue supported</span>
+          </div>
+
+          <div class="metric">
+            <strong>AI Solutions</strong>
+            <span>Built for finance workflows</span>
+          </div>
+
+          <div class="metric">
+            <strong>Global</strong>
+            <span>Business and strategy perspective</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <ul class="bullets">
-        <li>5-year FCFF forecast + terminal value</li>
-        <li>Sensitivity grid on WACC and terminal growth</li>
-        <li>Cross-check vs sector medians (EV/Sales, EV/EBITDA, P/E)</li>
-      </ul>
+    <!-- FEATURED WORK -->
 
-      <div class="actions">
-        <a class="btn btn-primary" href="assets/palantir-valuation.pdf" target="_blank" rel="noopener">
-          Open in new tab →
-        </a>
-        <a class="btn btn-ghost" href="#palantir-viewer">
-          Jump to viewer ↓
-        </a>
+    <section id="work" class="projects">
+      <div class="container">
+        <div class="section-kicker">
+          Featured Work
+        </div>
+
+        <div class="section-heading">
+          <h2>Solutions that drive impact.</h2>
+
+          <p>
+            Selected projects across FP&amp;A, finance automation,
+            forecasting, workforce planning, and venture strategy.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div>
+              <div class="project-icon">◎</div>
+
+              <h3>AI-Powered Workforce Planning</h3>
+
+              <p>
+                Designed a Microsoft Copilot capability that compares
+                employee-level actual and forecast data to identify new hires,
+                attrition, transfers, delayed hiring, and headcount variances.
+              </p>
+
+              <div class="project-meta">
+                <span class="tag">Microsoft Copilot</span>
+                <span class="tag">Workforce Planning</span>
+                <span class="tag">FP&amp;A</span>
+              </div>
+            </div>
+
+            <a class="project-link" href="#contact">
+              Case study coming soon →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <div class="project-icon">◫</div>
+
+              <h3>OpEx Commentary Agent</h3>
+
+              <p>
+                Built an AI-assisted workflow that analyzes monthly and
+                year-to-date GL variances and generates structured,
+                management-ready commentary.
+              </p>
+
+              <div class="project-meta">
+                <span class="tag">Variance Analysis</span>
+                <span class="tag">AI Workflow</span>
+                <span class="tag">Executive Reporting</span>
+              </div>
+            </div>
+
+            <a class="project-link" href="#contact">
+              Case study coming soon →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <div class="project-icon">⌁</div>
+
+              <h3>Forecast Intelligence</h3>
+
+              <p>
+                Developing a finance intelligence framework that combines
+                historical performance, operating drivers, scenarios, and
+                AI-supported analysis across revenue, COGS, OpEx, and
+                workforce costs.
+              </p>
+
+              <div class="project-meta">
+                <span class="tag">Forecasting</span>
+                <span class="tag">Scenario Modeling</span>
+                <span class="tag">Decision Support</span>
+              </div>
+            </div>
+
+            <a class="project-link" href="#contact">
+              In development →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <div class="project-icon">◉</div>
+
+              <h3>Venture Strategy Consulting</h3>
+
+              <p>
+                Advised Eqwow Ventures on an international expansion thesis
+                connecting Portugal and Brazil, supported by startup ecosystem,
+                capital flow, talent, and venture-market research.
+              </p>
+
+              <div class="project-meta">
+                <span class="tag">Venture Capital</span>
+                <span class="tag">Market Strategy</span>
+                <span class="tag">Investor Storytelling</span>
+              </div>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://www.linkedin.com/posts/monicablatyta_entrepreneurshipeducation-eqwowventures-activity-7418010623671705600-Lhon"
+              target="_blank"
+              rel="noopener"
+            >
+              View supporting post →
+            </a>
+          </article>
+        </div>
+
+        <div class="impact-band">
+          <h3>
+            Impact through insight, automation, and better decisions.
+          </h3>
+
+          <div class="impact-number">
+            <strong>$160M+</strong>
+            <span>Revenue supported</span>
+          </div>
+
+          <div class="impact-number">
+            <strong>40%</strong>
+            <span>Faster reporting cycle</span>
+          </div>
+
+          <div class="impact-number">
+            <strong>10%</strong>
+            <span>Reduction in budget variance</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Embedded Viewer -->
-      <div id="palantir-viewer" class="viewer">
-        <iframe
-          src="palantir-valuation.pdf#view=FitH"
-          title="Palantir Stock Valuation PDF Viewer"
-          loading="lazy">
-        </iframe>
+    <!-- PHILOSOPHY -->
+
+    <section id="philosophy" class="philosophy">
+      <div class="container">
+        <div class="section-kicker">
+          Finance Philosophy
+        </div>
+
+        <blockquote>
+          Finance teams should spend less time assembling information and more
+          time <span>making decisions.</span>
+        </blockquote>
       </div>
-    </article>
-            <div class="item">
-              <div class="itemTop">
-                <b>Portfolio Project 3</b>
-                <span class="tiny">Strategy</span>
-              </div>
-              <p>Short 1–2 line description of the research and recommendation.</p>
-              <ul>
-                <li>Frameworks: issue trees, market sizing, competitive analysis.</li>
-                <li>Outcome: recommendation + roadmap</li>
-              </ul>
-              <div class="chips">
-                <span class="chip">Strategy</span><span class="chip">Slides</span>
-              </div>
-            </div>
-          </div>
-        </section>
+    </section>
 
-        <!-- SKILLS + EDUCATION -->
-        <section id="skills">
-          <div class="sectionHead">
-            <h2>Skills</h2>
-            <p>What I use day-to-day.</p>
-          </div>
+    <!-- EXPERIENCE -->
 
-          <div class="grid2">
-            <div class="card panel">
-              <b>Tools</b>
-              <div class="chips">
-                <span class="chip">Excel</span>
-                <span class="chip">PowerPoint</span>
-                <span class="chip">Power BI / Tableau</span>
-                <span class="chip">SQL</span>
-                <span class="chip">Python</span>
-              </div>
-              <div class="sep"></div>
-              <b>Domains</b>
-              <div class="chips">
-                <span class="chip">FP&A</span>
-                <span class="chip">Corporate Finance</span>
-                <span class="chip">Analytics</span>
-                <span class="chip">Market research</span>
-                <span class="chip">Operations</span>
-              </div>
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-kicker">
+          Experience
+        </div>
+
+        <div class="section-heading">
+          <h2>Finance, strategy, and transformation.</h2>
+
+          <p>
+            Experience across global diagnostics, technology, manufacturing,
+            enterprise services, and venture strategy.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="date">
+              2025 — Present
             </div>
 
-            <div class="card panel">
-              <b>Education</b>
-              <div class="sep"></div>
-              <div class="item" style="padding:14px">
-                <div class="itemTop">
-                  <b>Babson College — MBA (Machine Learning & Business Analytics)</b>
-                  <span>Candidate: May 2027</span>
-                </div>
-                <p class="note">Relevant coursework: corporate finance, analytics, ML, operations, strategy.</p>
-                <div class="chips">
-                  <span class="chip">Leadership</span>
-                  <span class="chip">Projects</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            <div>
+              <h3>
+                LGC Clinical Diagnostics — Senior Financial Analyst
+              </h3>
 
-        <!-- CONTACT -->
-        <section id="contact">
-          <div class="sectionHead">
-            <h2>Contact</h2>
-            <p>Quick way to reach me.</p>
-          </div>
-
-          <div class="contactGrid">
-            <div class="card panel">
-              <b>Send a message</b>
-              <p class="note">This form copies an email template for you (no backend required).</p>
-
-              <div class="field">
-                <label for="cname">Your name</label>
-                <input id="cname" placeholder="Jane Doe" />
-              </div>
-
-              <div class="field">
-                <label for="cemail">Your email</label>
-                <input id="cemail" placeholder="jane@email.com" />
-              </div>
-
-              <div class="field">
-                <label for="cmsg">Message</label>
-                <textarea id="cmsg" placeholder="Hi Rajat — I’d love to connect about..."></textarea>
-              </div>
-
-              <div class="heroActions" style="margin-top:12px">
-                <button class="btn btnPrimary" id="copyEmailBtn" type="button">📩 Copy email message</button>
-                <a class="btn" id="mailtoBtn" href="#">Open in email app</a>
-              </div>
-
-              <p class="note tiny" style="margin-top:10px">
+              <p>
+                Strategic finance partner supporting approximately $160M in
+                revenue, forecasting, gross-margin analysis, workforce
+                planning, reporting automation, and AI-enabled FP&amp;A
+                initiatives.
               </p>
             </div>
 
-            <div class="card panel">
-              <b>Links</b>
-              <div class="sep"></div>
-              <div class="item">
-                <div class="itemTop">
-                  <b>Email</b>
-                  <span class="tiny"><a id="emailLink2" href="mailto:rajktinjani@gmail.com">rajktinjani@gmail.com</a></span>
-                </div>
-                <p class="note">Best for opportunities, intros, or project collabs.</p>
-              </div>
-
-              <div class="item" style="margin-top:12px">
-                <div class="itemTop">
-                  <b>LinkedIn</b>
-                  <span class="tiny"><a id="linkedinBtn2" href="#" target="_blank" rel="noreferrer">Profile</a></span>
-                </div>
-                <p class="note">Let’s connect — happy to chat.</p>
-              </div>
-
-              <div class="item" style="margin-top:12px">
-                <div class="itemTop">
-                  <b>GitHub</b>
-                  <span class="tiny"><a id="githubBtn2" href="#" target="_blank" rel="noreferrer">Projects</a></span>
-                </div>
-                <p class="note">Code, dashboards, and experiments.</p>
-              </div>
-
-              <div class="sep"></div>
-              <span class="tiny" style="color:var(--muted)">
-                © <span id="year"></span> <span id="name2">Rajat Kumar</span>
-              </span>
+            <div class="location">
+              Milford, MA
             </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="date">
+              2026 — Present
+            </div>
+
+            <div>
+              <h3>
+                Eqwow Ventures — MBA Strategy Consulting
+              </h3>
+
+              <p>
+                Developed an international venture expansion thesis using
+                ecosystem analysis, funding benchmarks, and investor-ready
+                strategic storytelling.
+              </p>
+            </div>
+
+            <div class="location">
+              Lisbon, Portugal
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="date">
+              2022 — 2025
+            </div>
+
+            <div>
+              <h3>
+                Epsilon — Senior Financial Analyst
+              </h3>
+
+              <p>
+                Partnered with executive leaders, managed approximately $40M
+                in operating expenses, supported workforce planning, and
+                improved revenue visibility through reporting automation.
+              </p>
+            </div>
+
+            <div class="location">
+              Wakefield, MA
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="date">
+              2017 — 2022
+            </div>
+
+            <div>
+              <h3>
+                Bruker • IBM • State Street
+              </h3>
+
+              <p>
+                Built foundational experience across financial analysis,
+                operations, enterprise reporting, service finance, and
+                process improvement.
+              </p>
+            </div>
+
+            <div class="location">
+              Massachusetts / New York
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-kicker">
+          Core Expertise
+        </div>
+
+        <div class="section-heading">
+          <h2>Where finance meets technology.</h2>
+
+          <p>
+            A combination of traditional FP&amp;A depth and hands-on
+            experience modernizing finance workflows.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <h3>Strategic Finance</h3>
+
+            <ul>
+              <li>FP&amp;A and business partnering</li>
+              <li>Forecasting and scenario modeling</li>
+              <li>Gross-margin and price-volume-mix analysis</li>
+              <li>Workforce planning</li>
+              <li>Executive reporting</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card">
+            <h3>AI &amp; Analytics</h3>
+
+            <ul>
+              <li>Microsoft Copilot</li>
+              <li>AI workflow and agent design</li>
+              <li>Power BI and Tableau</li>
+              <li>SQL and Python</li>
+              <li>Prompt engineering</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card">
+            <h3>Finance Systems</h3>
+
+            <ul>
+              <li>Excel and VBA</li>
+              <li>BusinessObjects</li>
+              <li>Workday Adaptive Planning</li>
+              <li>SAP and Hyperion</li>
+              <li>Power Query and Bloomberg</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <div class="section-kicker">
+              Let’s Connect
+            </div>
+
+            <h2>
+              Building better finance systems.
+            </h2>
+
+            <p>
+              I’m interested in conversations about strategic finance,
+              FP&amp;A, finance transformation, analytics, and practical
+              applications of AI.
+            </p>
           </div>
-        </section>
 
-    <div class="toast" id="toast">Copied!</div>
+          <div class="contact-links">
+            <a
+              class="contact-link"
+              href="mailto:rajktinjani@gmail.com"
+            >
+              rajktinjani@gmail.com
+            </a>
 
-    <script>
-      // ✅ EDIT ONLY THIS SECTION (your details)
-      const profile = {
-        name: "Rajat Kumar",
-        location: "Boston, MA",
-        role: "MBA Candidate • Analytics",
-        focus: "Corporate Finance • FP&A • BI",
-        openTo: "Full-time • May 2026",
-        email: "rajktinjani@gmail.com",
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/rajat-kumar-tinjani/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn Profile
+            </a>
 
-        // Replace with your real URLs:
-        linkedin: "https://www.linkedin.com/in/rajat-kumar-tinjani/",
+            <a
+              class="contact-link"
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        // Upload your resume PDF to the repo root and name it resume.pdf (or change this)
-        resumePdfUrl: "resume.pdf",
+  <footer>
+    <div class="container footer-row">
+      <span>
+        © <span id="year"></span> Rajat Kumar
+      </span>
 
-        headline:
-          "I turn messy data into decisions — dashboards, models, and clear strategy. Here you’ll find my work, experience, and how to reach me.",
+      <span>
+        Strategic Finance • AI • Transformation
+      </span>
+    </div>
+  </footer>
 
-        about:
-          "I’m a data-driven professional who loves connecting numbers to real-world outcomes. I enjoy turning messy data into decisions through dashboards, financial models, and clear strategy narratives.\n\nCurrently, I’m focused on corporate finance, analytics, and business strategy — and I’m always excited about projects at the intersection of finance and technology."
-      };
-
-      // Bind profile to the page
-      const setText = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
-      const setHref = (id, value) => { const el = document.getElementById(id); if (el) el.href = value; };
-
-      setText("brandName", profile.name);
-      setText("name", profile.name);
-      setText("name2", profile.name);
-      setText("location", profile.location);
-      setText("role", profile.role);
-      setText("focus", profile.focus);
-      setText("openTo", profile.openTo);
-      setText("headline", profile.headline);
-      setText("aboutText", profile.about);
-
-      setHref("emailLink", `mailto:${profile.email}`);
-      setHref("emailLink2", `mailto:${profile.email}`);
-      document.getElementById("emailLink").textContent = profile.email;
-      document.getElementById("emailLink2").textContent = profile.email;
-
-      setHref("linkedinBtn", profile.linkedin);
-      setHref("linkedinBtn2", profile.linkedin);
-      setHref("githubBtn", profile.github);
-      setHref("githubBtn2", profile.github);
-
-      const resumeBtn = document.getElementById("resumeBtn");
-      resumeBtn.href = profile.resumePdfUrl;
-      resumeBtn.setAttribute("download", "");
-      if (!profile.resumePdfUrl || profile.resumePdfUrl === "#") {
-        resumeBtn.removeAttribute("download");
-        resumeBtn.textContent = "⬇️ Add your resume PDF link";
-      }
-
-      setText("year", new Date().getFullYear());
-
-      // Contact helpers (no backend)
-      const toast = document.getElementById("toast");
-      const showToast = (msg) => {
-        toast.textContent = msg;
-        toast.style.display = "block";
-        clearTimeout(window.__t);
-        window.__t = setTimeout(() => (toast.style.display = "none"), 1600);
-      };
-
-      const buildEmailBody = () => {
-        const name = document.getElementById("cname").value.trim();
-        const email = document.getElementById("cemail").value.trim();
-        const msg = document.getElementById("cmsg").value.trim();
-        const lines = [
-          `Hi ${profile.name},`,
-          "",
-          msg || "(write your message here)",
-          "",
-          `— ${name || "Your Name"}${email ? ` (${email})` : ""}`
-        ];
-        return lines.join("\n");
-      };
-
-      document.getElementById("copyEmailBtn").addEventListener("click", async () => {
-        const body = buildEmailBody();
-        try{
-          await navigator.clipboard.writeText(body);
-          showToast("Copied email message");
-        }catch{
-          showToast("Copy failed (browser blocked)");
-        }
-      });
-
-      document.getElementById("mailtoBtn").addEventListener("click", (e) => {
-        e.preventDefault();
-        const subject = encodeURIComponent(`Hello ${profile.name} — quick intro`);
-        const body = encodeURIComponent(buildEmailBody());
-        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-      });
-    </script>
-  </body>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
 </html>
