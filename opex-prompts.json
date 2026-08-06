@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "demo": "OpEx Commentary Agent",
+    "version": "1.0",
+    "dataset": "opex-data.json",
+    "promptCount": 6
+  },
+  "prompts": [
+    {
+      "id": "summarize-mtd-by-entity",
+      "label": "Summarize MTD drivers by entity",
+      "description": "Ranks entities by forecast variance and identifies the largest contributors.",
+      "responseId": "opex-entity-summary",
+      "outputViews": [
+        "executiveSummary",
+        "topEntities",
+        "methodology"
+      ]
+    },
+    {
+      "id": "top-unfavorable-variances",
+      "label": "Identify the top unfavorable variances",
+      "description": "Surfaces the largest positive expense variances versus forecast.",
+      "responseId": "opex-top-unfavorable",
+      "outputViews": [
+        "executiveSummary",
+        "rankedDrivers",
+        "followUpQuestions"
+      ]
+    },
+    {
+      "id": "largest-gl-drivers",
+      "label": "Explain the largest GL drivers",
+      "description": "Aggregates results by GL category and ranks the most material movements.",
+      "responseId": "opex-gl-drivers",
+      "outputViews": [
+        "executiveSummary",
+        "topGlCategories",
+        "methodology"
+      ]
+    },
+    {
+      "id": "compare-forecast-budget",
+      "label": "Compare actuals against forecast and budget",
+      "description": "Compares total actual spend against both planning baselines.",
+      "responseId": "opex-plan-comparison",
+      "outputViews": [
+        "executiveSummary",
+        "metrics",
+        "entityComparison"
+      ]
+    },
+    {
+      "id": "month-over-month",
+      "label": "Highlight unusual month-over-month changes",
+      "description": "Finds GL categories with the largest change versus the prior month.",
+      "responseId": "opex-mom-change",
+      "outputViews": [
+        "executiveSummary",
+        "largestMovements",
+        "reviewFlags"
+      ]
+    },
+    {
+      "id": "draft-executive-commentary",
+      "label": "Draft executive commentary",
+      "description": "Produces a concise management-ready summary of MTD performance.",
+      "responseId": "opex-executive-commentary",
+      "outputViews": [
+        "commentary",
+        "supportingMetrics",
+        "humanReview"
+      ]
+    }
+  ]
+}

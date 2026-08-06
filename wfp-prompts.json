@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "demo": "Workforce Planning Agent",
+    "version": "1.0",
+    "dataset": "wfp-data.json",
+    "promptCount": 6
+  },
+  "prompts": [
+    {
+      "id": "movement-summary",
+      "label": "What changed since last month?",
+      "description": "Summarizes hires, leavers, transfers, promotions, and net headcount movement.",
+      "responseId": "wfp-movement-summary",
+      "outputViews": [
+        "executiveSummary",
+        "movementMetrics",
+        "entityMovements"
+      ]
+    },
+    {
+      "id": "new-hires-leavers",
+      "label": "Identify all new hires and leavers",
+      "description": "Returns employee-level hire and departure records.",
+      "responseId": "wfp-hires-leavers",
+      "outputViews": [
+        "executiveSummary",
+        "newHires",
+        "leavers"
+      ]
+    },
+    {
+      "id": "cost-center-transfers",
+      "label": "Show cost-center transfers",
+      "description": "Lists employees identified as transfers and their cost-center movement.",
+      "responseId": "wfp-transfers",
+      "outputViews": [
+        "executiveSummary",
+        "transfers",
+        "reviewNotes"
+      ]
+    },
+    {
+      "id": "delayed-hires",
+      "label": "Highlight vacancies delayed versus forecast",
+      "description": "Identifies new hires whose actual start date is later than forecast.",
+      "responseId": "wfp-delayed-hires",
+      "outputViews": [
+        "executiveSummary",
+        "delayedHires",
+        "costImpact"
+      ]
+    },
+    {
+      "id": "personnel-cost-risk",
+      "label": "Summarize personnel-cost risk",
+      "description": "Highlights cost movements associated with hires, leavers, and delayed starts.",
+      "responseId": "wfp-cost-risk",
+      "outputViews": [
+        "executiveSummary",
+        "metrics",
+        "largestEntities"
+      ]
+    },
+    {
+      "id": "draft-headcount-commentary",
+      "label": "Draft headcount commentary",
+      "description": "Produces management-ready commentary with human-review controls.",
+      "responseId": "wfp-executive-commentary",
+      "outputViews": [
+        "commentary",
+        "supportingMetrics",
+        "humanReview"
+      ]
+    }
+  ]
+}

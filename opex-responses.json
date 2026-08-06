@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "demo": "OpEx Commentary Agent",
+    "version": "1.0",
+    "datasetRows": 200,
+    "currency": "USD",
+    "varianceConvention": "For expense data, Actual minus Forecast greater than zero is unfavorable.",
+    "generatedFrom": "opex-data.json"
+  },
+  "responses": {
+    "opex-entity-summary": {
+      "title": "MTD drivers by entity",
+      "executiveSummary": "Total MTD operating expense was $47.4M, $118K favorable versus forecast. The largest absolute entity movements were led by APAC Operations and Manufacturing Services.",
+      "metrics": {
+        "actualMtd": 47419857,
+        "forecastMtd": 47538111,
+        "varianceVsFcst": -118254,
+        "varianceLabel": "Favorable"
+      },
+      "topEntities": [
+        {
+          "rank": 1,
+          "entity": "APAC Operations",
+          "actualMtd": 10305773,
+          "forecastMtd": 10630653,
+          "varianceVsFcst": -324880,
+          "varianceLabel": "Favorable"
+        },
+        {
+          "rank": 2,
+          "entity": "Manufacturing Services",
+          "actualMtd": 10736396,
+          "forecastMtd": 11057689,
+          "varianceVsFcst": -321293,
+          "varianceLabel": "Favorable"
+        },
+        {
+          "rank": 3,
+          "entity": "North America Diagnostics",
+          "actualMtd": 9972289,
+          "forecastMtd": 9760033,
+          "varianceVsFcst": 212256,
+          "varianceLabel": "Unfavorable"
+        },
+        {
+          "rank": 4,
+          "entity": "Europe Genomics",
+          "actualMtd": 7605970,
+          "forecastMtd": 7402004,
+          "varianceVsFcst": 203966,
+          "varianceLabel": "Unfavorable"
+        },
+        {
+          "rank": 5,
+          "entity": "Corporate Functions",
+          "actualMtd": 8799429,
+          "forecastMtd": 8687732,
+          "varianceVsFcst": 111697,
+          "varianceLabel": "Unfavorable"
+        }
+      ],
+      "methodology": [
+        "Aggregate Actual MTD and Forecast MTD by entity.",
+        "Calculate expense variance as Actual MTD minus Forecast MTD.",
+        "Rank entities by absolute variance to identify the most material movements.",
+        "Label positive expense variance as unfavorable and negative variance as favorable."
+      ]
+    },
+    "opex-top-unfavorable": {
+      "title": "Top unfavorable entity variances",
+      "executiveSummary": "The top five unfavorable entity movements represent 100.0% of total unfavorable entity variance. North America Diagnostics is the largest unfavorable contributor at $212K.",
+      "rankedDrivers": [
+        {
+          "rank": 1,
+          "entity": "North America Diagnostics",
+          "varianceVsFcst": 212256,
+          "formattedVariance": "$212K",
+          "shareOfUnfavorableVariancePct": 40.2
+        },
+        {
+          "rank": 2,
+          "entity": "Europe Genomics",
+          "varianceVsFcst": 203966,
+          "formattedVariance": "$204K",
+          "shareOfUnfavorableVariancePct": 38.6
+        },
+        {
+          "rank": 3,
+          "entity": "Corporate Functions",
+          "varianceVsFcst": 111697,
+          "formattedVariance": "$112K",
+          "shareOfUnfavorableVariancePct": 21.2
+        },
+        {
+          "rank": 4,
+          "entity": "Manufacturing Services",
+          "varianceVsFcst": -321293,
+          "formattedVariance": "-$321K",
+          "shareOfUnfavorableVariancePct": 0.0
+        },
+        {
+          "rank": 5,
+          "entity": "APAC Operations",
+          "varianceVsFcst": -324880,
+          "formattedVariance": "-$325K",
+          "shareOfUnfavorableVariancePct": 0.0
+        }
+      ],
+      "frequentSourceDrivers": [
+        {
+          "driver": "Utility inflation",
+          "rowCount": 29
+        },
+        {
+          "driver": "Marketing campaign",
+          "rowCount": 25
+        },
+        {
+          "driver": "Timing difference",
+          "rowCount": 25
+        },
+        {
+          "driver": "Higher contractor usage",
+          "rowCount": 22
+        },
+        {
+          "driver": "Software renewal",
+          "rowCount": 19
+        }
+      ],
+      "followUpQuestions": [
+        "Which GL categories explain the largest entity variance?",
+        "Is the movement timing-related or expected to recur?",
+        "Does the variance require a forecast update?",
+        "Which owner should validate the underlying driver?"
+      ]
+    },
+    "opex-gl-drivers": {
+      "title": "Largest GL category drivers",
+      "executiveSummary": "The most material GL category by absolute forecast variance was Utilities at $319K unfavorable. The next largest movements were Software and Equipment.",
+      "topGlCategories": [
+        {
+          "rank": 1,
+          "glCategory": "Utilities",
+          "actualMtd": 6051713,
+          "forecastMtd": 5733065,
+          "varianceVsFcst": 318648,
+          "varianceLabel": "Unfavorable"
+        },
+        {
+          "rank": 2,
+          "glCategory": "Software",
+          "actualMtd": 2679960,
+          "forecastMtd": 2967281,
+          "varianceVsFcst": -287321,
+          "varianceLabel": "Favorable"
+        },
+        {
+          "rank": 3,
+          "glCategory": "Equipment",
+          "actualMtd": 4091842,
+          "forecastMtd": 3836143,
+          "varianceVsFcst": 255699,
+          "varianceLabel": "Unfavorable"
+        },
+        {
+          "rank": 4,
+          "glCategory": "Freight",
+          "actualMtd": 4710084,
+          "forecastMtd": 4962120,
+          "varianceVsFcst": -252036,
+          "varianceLabel": "Favorable"
+        },
+        {
+          "rank": 5,
+          "glCategory": "Professional Services",
+          "actualMtd": 3666730,
+          "forecastMtd": 3764144,
+          "varianceVsFcst": -97414,
+          "varianceLabel": "Favorable"
+        }
+      ],
+      "methodology": [
+        "Aggregate rows by GL category.",
+        "Calculate Actual MTD minus Forecast MTD.",
+        "Rank GL categories by absolute variance.",
+        "Retain both favorable and unfavorable movements to avoid one-sided analysis."
+      ]
+    },
+    "opex-plan-comparison": {
+      "title": "Actual versus forecast and budget",
+      "executiveSummary": "Actual MTD expense of $47.4M was $118K favorable to forecast and $615K favorable to budget.",
+      "metrics": {
+        "actualMtd": 47419857,
+        "forecastMtd": 47538111,
+        "budgetMtd": 48035192,
+        "varianceVsForecast": -118254,
+        "varianceVsBudget": -615335
+      },
+      "entityComparison": [
+        {
+          "entity": "APAC Operations",
+          "actualMtd": 10305773,
+          "forecastMtd": 10630653,
+          "budgetMtd": 9925594,
+          "varianceVsForecast": -324880,
+          "varianceVsBudget": 380179
+        },
+        {
+          "entity": "Corporate Functions",
+          "actualMtd": 8799429,
+          "forecastMtd": 8687732,
+          "budgetMtd": 9241213,
+          "varianceVsForecast": 111697,
+          "varianceVsBudget": -441784
+        },
+        {
+          "entity": "Europe Genomics",
+          "actualMtd": 7605970,
+          "forecastMtd": 7402004,
+          "budgetMtd": 7407878,
+          "varianceVsForecast": 203966,
+          "varianceVsBudget": 198092
+        },
+        {
+          "entity": "Manufacturing Services",
+          "actualMtd": 10736396,
+          "forecastMtd": 11057689,
+          "budgetMtd": 11048467,
+          "varianceVsForecast": -321293,
+          "varianceVsBudget": -312071
+        },
+        {
+          "entity": "North America Diagnostics",
+          "actualMtd": 9972289,
+          "forecastMtd": 9760033,
+          "budgetMtd": 10412040,
+          "varianceVsForecast": 212256,
+          "varianceVsBudget": -439751
+        }
+      ]
+    },
+    "opex-mom-change": {
+      "title": "Largest month-over-month changes",
+      "executiveSummary": "Total MTD spend was $434K lower than the prior month. The largest absolute month-over-month GL movement was Payroll at $338K.",
+      "largestMovements": [
+        {
+          "rank": 1,
+          "glCategory": "Payroll",
+          "actualMtd": 4417583,
+          "priorMonth": 4079983,
+          "changeVsPrior": 337600,
+          "changeLabel": "Increase"
+        },
+        {
+          "rank": 2,
+          "glCategory": "Training",
+          "actualMtd": 3675174,
+          "priorMonth": 3944291,
+          "changeVsPrior": -269117,
+          "changeLabel": "Decrease"
+        },
+        {
+          "rank": 3,
+          "glCategory": "Contractors",
+          "actualMtd": 6399975,
+          "priorMonth": 6655871,
+          "changeVsPrior": -255896,
+          "changeLabel": "Decrease"
+        },
+        {
+          "rank": 4,
+          "glCategory": "Marketing",
+          "actualMtd": 5587978,
+          "priorMonth": 5788355,
+          "changeVsPrior": -200377,
+          "changeLabel": "Decrease"
+        },
+        {
+          "rank": 5,
+          "glCategory": "Freight",
+          "actualMtd": 4710084,
+          "priorMonth": 4833368,
+          "changeVsPrior": -123284,
+          "changeLabel": "Decrease"
+        }
+      ],
+      "reviewFlags": [
+        "Validate whether movements are timing-related or recurring.",
+        "Review categories with both material forecast variance and month-over-month change.",
+        "Confirm whether accruals or one-time items are present.",
+        "Escalate unexplained movements for business-owner review."
+      ]
+    },
+    "opex-executive-commentary": {
+      "title": "Draft executive commentary",
+      "commentary": "MTD operating expense was $47.4M, resulting in a $118K favorable variance versus forecast and a $615K favorable variance versus budget. The largest absolute entity movement was APAC Operations, while Utilities represented the most material GL category movement. Spend was $434K lower than the prior month. Management should validate the largest movements, distinguish timing from recurring impacts, and determine whether the current forecast requires adjustment.",
+      "supportingMetrics": {
+        "actualMtd": "$47.4M",
+        "varianceVsForecast": "-$118K",
+        "varianceVsBudget": "-$615K",
+        "changeVsPriorMonth": "-$434K"
+      },
+      "humanReview": {
+        "required": true,
+        "checks": [
+          "Confirm business context with entity and cost-center owners.",
+          "Verify whether listed drivers are supported by source transactions.",
+          "Remove one-time or timing items from recurring run-rate conclusions.",
+          "Approve wording before inclusion in management reporting."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1448 @@
+{
+  "metadata": {
+    "demo": "Workforce Planning Agent",
+    "version": "1.0",
+    "datasetRows": 200,
+    "currency": "USD",
+    "generatedFrom": "wfp-data.json",
+    "movementField": "Movement is treated as the source-of-truth classification in this synthetic dataset."
+  },
+  "responses": {
+    "wfp-movement-summary": {
+      "title": "Workforce movement summary",
+      "executiveSummary": "The dataset contains 43 new hires, 38 leavers, 42 transfers, and 39 promotions. Net headcount movement from hires and leavers was an increase of 5.",
+      "movementMetrics": {
+        "newHires": 43,
+        "leavers": 38,
+        "transfers": 42,
+        "promotions": 39,
+        "noChange": 38,
+        "netHeadcountChange": 5
+      },
+      "entityMovements": [
+        {
+          "entity": "North America Diagnostics",
+          "newHires": 8,
+          "leavers": 13,
+          "transfers": 11,
+          "promotions": 12,
+          "netHeadcountChange": -5
+        },
+        {
+          "entity": "Corporate Functions",
+          "newHires": 10,
+          "leavers": 6,
+          "transfers": 8,
+          "promotions": 10,
+          "netHeadcountChange": 4
+        },
+        {
+          "entity": "Europe Genomics",
+          "newHires": 7,
+          "leavers": 8,
+          "transfers": 10,
+          "promotions": 7,
+          "netHeadcountChange": -1
+        },
+        {
+          "entity": "Manufacturing Services",
+          "newHires": 11,
+          "leavers": 4,
+          "transfers": 3,
+          "promotions": 6,
+          "netHeadcountChange": 7
+        },
+        {
+          "entity": "APAC Operations",
+          "newHires": 7,
+          "leavers": 7,
+          "transfers": 10,
+          "promotions": 4,
+          "netHeadcountChange": 0
+        }
+      ]
+    },
+    "wfp-hires-leavers": {
+      "title": "New hires and leavers",
+      "executiveSummary": "43 new hires and 38 leavers were identified. The associated monthly cost of new hires is $502K, compared with $439K of monthly cost associated with leavers.",
+      "newHires": [
+        {
+          "employeeId": "E10005",
+          "employeeName": "Casey Brown",
+          "entity": "North America Diagnostics",
+          "department": "Operations",
+          "title": "Engineer",
+          "forecastStartDate": "2026-12-11",
+          "actualStartDate": "2026-12-26",
+          "monthlyCost": 8914
+        },
+        {
+          "employeeId": "E10017",
+          "employeeName": "Chris Patel",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "title": "Engineer",
+          "forecastStartDate": "2026-11-12",
+          "actualStartDate": "2026-11-27",
+          "monthlyCost": 10340
+        },
+        {
+          "employeeId": "E10021",
+          "employeeName": "Riley Wilson",
+          "entity": "North America Diagnostics",
+          "department": "Operations",
+          "title": "Engineer",
+          "forecastStartDate": "2026-05-19",
+          "actualStartDate": "2026-06-03",
+          "monthlyCost": 17578
+        },
+        {
+          "employeeId": "E10022",
+          "employeeName": "Chris Johnson",
+          "entity": "Corporate Functions",
+          "department": "HR",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-11-13",
+          "actualStartDate": "2026-10-14",
+          "monthlyCost": 12173
+        },
+        {
+          "employeeId": "E10024",
+          "employeeName": "Avery Wilson",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "title": "Director",
+          "forecastStartDate": "2026-04-04",
+          "actualStartDate": "2026-03-20",
+          "monthlyCost": 14976
+        },
+        {
+          "employeeId": "E10025",
+          "employeeName": "Morgan Wilson",
+          "entity": "Corporate Functions",
+          "department": "Commercial",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-02-06",
+          "actualStartDate": "2026-03-08",
+          "monthlyCost": 6841
+        },
+        {
+          "employeeId": "E10029",
+          "employeeName": "Chris Garcia",
+          "entity": "Corporate Functions",
+          "department": "Operations",
+          "title": "Scientist",
+          "forecastStartDate": "2026-06-20",
+          "actualStartDate": "2026-06-20",
+          "monthlyCost": 10234
+        },
+        {
+          "employeeId": "E10046",
+          "employeeName": "Morgan Johnson",
+          "entity": "Manufacturing Services",
+          "department": "Supply Chain",
+          "title": "Manager",
+          "forecastStartDate": "2026-04-15",
+          "actualStartDate": "2026-03-16",
+          "monthlyCost": 13063
+        },
+        {
+          "employeeId": "E10054",
+          "employeeName": "Jamie Lee",
+          "entity": "Europe Genomics",
+          "department": "R&D",
+          "title": "Scientist",
+          "forecastStartDate": "2026-05-06",
+          "actualStartDate": "2026-06-05",
+          "monthlyCost": 11465
+        },
+        {
+          "employeeId": "E10067",
+          "employeeName": "Sam Johnson",
+          "entity": "Corporate Functions",
+          "department": "Finance",
+          "title": "Analyst",
+          "forecastStartDate": "2026-03-17",
+          "actualStartDate": "2026-02-15",
+          "monthlyCost": 6509
+        },
+        {
+          "employeeId": "E10068",
+          "employeeName": "Chris Kim",
+          "entity": "Manufacturing Services",
+          "department": "HR",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-01-06",
+          "actualStartDate": "2025-12-22",
+          "monthlyCost": 9995
+        },
+        {
+          "employeeId": "E10073",
+          "employeeName": "Riley Davis",
+          "entity": "North America Diagnostics",
+          "department": "R&D",
+          "title": "Manager",
+          "forecastStartDate": "2026-03-14",
+          "actualStartDate": "2026-04-13",
+          "monthlyCost": 16757
+        },
+        {
+          "employeeId": "E10074",
+          "employeeName": "Morgan Lee",
+          "entity": "Corporate Functions",
+          "department": "HR",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-07-20",
+          "actualStartDate": "2026-07-20",
+          "monthlyCost": 16891
+        },
+        {
+          "employeeId": "E10080",
+          "employeeName": "Sam Lee",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "title": "Engineer",
+          "forecastStartDate": "2026-11-20",
+          "actualStartDate": "2026-11-05",
+          "monthlyCost": 17577
+        },
+        {
+          "employeeId": "E10082",
+          "employeeName": "Riley Kim",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "title": "Director",
+          "forecastStartDate": "2026-07-15",
+          "actualStartDate": "2026-06-30",
+          "monthlyCost": 6742
+        },
+        {
+          "employeeId": "E10089",
+          "employeeName": "Casey Davis",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "title": "Director",
+          "forecastStartDate": "2026-01-30",
+          "actualStartDate": "2026-03-01",
+          "monthlyCost": 11414
+        },
+        {
+          "employeeId": "E10090",
+          "employeeName": "Chris Davis",
+          "entity": "Manufacturing Services",
+          "department": "Finance",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-09-09",
+          "actualStartDate": "2026-08-10",
+          "monthlyCost": 6641
+        },
+        {
+          "employeeId": "E10102",
+          "employeeName": "Chris Johnson",
+          "entity": "APAC Operations",
+          "department": "IT",
+          "title": "Manager",
+          "forecastStartDate": "2026-10-24",
+          "actualStartDate": "2026-09-24",
+          "monthlyCost": 12923
+        },
+        {
+          "employeeId": "E10106",
+          "employeeName": "Casey Smith",
+          "entity": "North America Diagnostics",
+          "department": "R&D",
+          "title": "Engineer",
+          "forecastStartDate": "2026-02-01",
+          "actualStartDate": "2026-02-01",
+          "monthlyCost": 7269
+        },
+        {
+          "employeeId": "E10107",
+          "employeeName": "Taylor Chen",
+          "entity": "Corporate Functions",
+          "department": "R&D",
+          "title": "Director",
+          "forecastStartDate": "2026-08-01",
+          "actualStartDate": "2026-07-17",
+          "monthlyCost": 15259
+        },
+        {
+          "employeeId": "E10110",
+          "employeeName": "Chris Smith",
+          "entity": "APAC Operations",
+          "department": "HR",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-12-27",
+          "actualStartDate": "2027-01-26",
+          "monthlyCost": 15711
+        },
+        {
+          "employeeId": "E10111",
+          "employeeName": "Sam Brown",
+          "entity": "Corporate Functions",
+          "department": "Finance",
+          "title": "Manager",
+          "forecastStartDate": "2026-11-08",
+          "actualStartDate": "2026-11-23",
+          "monthlyCost": 7660
+        },
+        {
+          "employeeId": "E10113",
+          "employeeName": "Jordan Brown",
+          "entity": "Manufacturing Services",
+          "department": "Commercial",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-02-03",
+          "actualStartDate": "2026-02-18",
+          "monthlyCost": 8794
+        },
+        {
+          "employeeId": "E10114",
+          "employeeName": "Taylor Smith",
+          "entity": "Europe Genomics",
+          "department": "Commercial",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-08-22",
+          "actualStartDate": "2026-08-07",
+          "monthlyCost": 6572
+        },
+        {
+          "employeeId": "E10115",
+          "employeeName": "Jamie Davis",
+          "entity": "APAC Operations",
+          "department": "IT",
+          "title": "Manager",
+          "forecastStartDate": "2026-03-01",
+          "actualStartDate": "2026-03-16",
+          "monthlyCost": 9349
+        },
+        {
+          "employeeId": "E10117",
+          "employeeName": "Taylor Wilson",
+          "entity": "Corporate Functions",
+          "department": "R&D",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-03-23",
+          "actualStartDate": "2026-02-21",
+          "monthlyCost": 17978
+        },
+        {
+          "employeeId": "E10130",
+          "employeeName": "Casey Smith",
+          "entity": "Manufacturing Services",
+          "department": "Operations",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-08-30",
+          "actualStartDate": "2026-09-14",
+          "monthlyCost": 6971
+        },
+        {
+          "employeeId": "E10135",
+          "employeeName": "Sam Wilson",
+          "entity": "Europe Genomics",
+          "department": "Finance",
+          "title": "Engineer",
+          "forecastStartDate": "2026-11-16",
+          "actualStartDate": "2026-11-01",
+          "monthlyCost": 15272
+        },
+        {
+          "employeeId": "E10140",
+          "employeeName": "Sam Patel",
+          "entity": "North America Diagnostics",
+          "department": "Marketing",
+          "title": "Analyst",
+          "forecastStartDate": "2026-08-24",
+          "actualStartDate": "2026-08-09",
+          "monthlyCost": 13781
+        },
+        {
+          "employeeId": "E10145",
+          "employeeName": "Jordan Chen",
+          "entity": "Corporate Functions",
+          "department": "HR",
+          "title": "Scientist",
+          "forecastStartDate": "2026-09-22",
+          "actualStartDate": "2026-10-22",
+          "monthlyCost": 11898
+        },
+        {
+          "employeeId": "E10149",
+          "employeeName": "Riley Patel",
+          "entity": "Manufacturing Services",
+          "department": "R&D",
+          "title": "Engineer",
+          "forecastStartDate": "2026-05-28",
+          "actualStartDate": "2026-04-28",
+          "monthlyCost": 14276
+        },
+        {
+          "employeeId": "E10150",
+          "employeeName": "Sam Davis",
+          "entity": "APAC Operations",
+          "department": "R&D",
+          "title": "Analyst",
+          "forecastStartDate": "2026-03-22",
+          "actualStartDate": "2026-04-21",
+          "monthlyCost": 5745
+        },
+        {
+          "employeeId": "E10153",
+          "employeeName": "Jordan Johnson",
+          "entity": "North America Diagnostics",
+          "department": "Finance",
+          "title": "Analyst",
+          "forecastStartDate": "2026-11-14",
+          "actualStartDate": "2026-10-30",
+          "monthlyCost": 14785
+        },
+        {
+          "employeeId": "E10154",
+          "employeeName": "Jamie Brown",
+          "entity": "North America Diagnostics",
+          "department": "Finance",
+          "title": "Engineer",
+          "forecastStartDate": "2026-08-05",
+          "actualStartDate": "2026-08-20",
+          "monthlyCost": 13138
+        },
+        {
+          "employeeId": "E10155",
+          "employeeName": "Riley Patel",
+          "entity": "APAC Operations",
+          "department": "Marketing",
+          "title": "Scientist",
+          "forecastStartDate": "2026-10-25",
+          "actualStartDate": "2026-11-09",
+          "monthlyCost": 8441
+        },
+        {
+          "employeeId": "E10157",
+          "employeeName": "Alex Garcia",
+          "entity": "APAC Operations",
+          "department": "Marketing",
+          "title": "Scientist",
+          "forecastStartDate": "2026-12-29",
+          "actualStartDate": "2026-11-29",
+          "monthlyCost": 12665
+        },
+        {
+          "employeeId": "E10169",
+          "employeeName": "Sam Kim",
+          "entity": "Europe Genomics",
+          "department": "IT",
+          "title": "Engineer",
+          "forecastStartDate": "2026-05-25",
+          "actualStartDate": "2026-04-25",
+          "monthlyCost": 8958
+        },
+        {
+          "employeeId": "E10172",
+          "employeeName": "Alex Lee",
+          "entity": "APAC Operations",
+          "department": "HR",
+          "title": "Manager",
+          "forecastStartDate": "2026-03-15",
+          "actualStartDate": "2026-03-15",
+          "monthlyCost": 15322
+        },
+        {
+          "employeeId": "E10177",
+          "employeeName": "Jamie Smith",
+          "entity": "North America Diagnostics",
+          "department": "IT",
+          "title": "Director",
+          "forecastStartDate": "2027-01-01",
+          "actualStartDate": "2026-12-17",
+          "monthlyCost": 10454
+        },
+        {
+          "employeeId": "E10181",
+          "employeeName": "Morgan Davis",
+          "entity": "Manufacturing Services",
+          "department": "Supply Chain",
+          "title": "Scientist",
+          "forecastStartDate": "2026-10-28",
+          "actualStartDate": "2026-11-12",
+          "monthlyCost": 12197
+        },
+        {
+          "employeeId": "E10186",
+          "employeeName": "Morgan Smith",
+          "entity": "Manufacturing Services",
+          "department": "Commercial",
+          "title": "Senior Analyst",
+          "forecastStartDate": "2026-12-12",
+          "actualStartDate": "2026-12-27",
+          "monthlyCost": 8214
+        },
+        {
+          "employeeId": "E10190",
+          "employeeName": "Morgan Johnson",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "title": "Manager",
+          "forecastStartDate": "2026-05-11",
+          "actualStartDate": "2026-04-11",
+          "monthlyCost": 14649
+        },
+        {
+          "employeeId": "E10196",
+          "employeeName": "Casey Brown",
+          "entity": "Europe Genomics",
+          "department": "Supply Chain",
+          "title": "Coordinator",
+          "forecastStartDate": "2026-12-31",
+          "actualStartDate": "2026-12-16",
+          "monthlyCost": 16075
+        }
+      ],
+      "leavers": [
+        {
+          "employeeId": "E10000",
+          "employeeName": "Casey Davis",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "title": "Scientist",
+          "monthlyCost": 11852
+        },
+        {
+          "employeeId": "E10002",
+          "employeeName": "Alex Brown",
+          "entity": "North America Diagnostics",
+          "department": "Operations",
+          "title": "Scientist",
+          "monthlyCost": 10076
+        },
+        {
+          "employeeId": "E10011",
+          "employeeName": "Alex Chen",
+          "entity": "North America Diagnostics",
+          "department": "Marketing",
+          "title": "Manager",
+          "monthlyCost": 7129
+        },
+        {
+          "employeeId": "E10027",
+          "employeeName": "Jordan Smith",
+          "entity": "Corporate Functions",
+          "department": "Marketing",
+          "title": "Engineer",
+          "monthlyCost": 13053
+        },
+        {
+          "employeeId": "E10030",
+          "employeeName": "Casey Davis",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Engineer",
+          "monthlyCost": 15967
+        },
+        {
+          "employeeId": "E10034",
+          "employeeName": "Morgan Johnson",
+          "entity": "APAC Operations",
+          "department": "IT",
+          "title": "Engineer",
+          "monthlyCost": 14997
+        },
+        {
+          "employeeId": "E10048",
+          "employeeName": "Taylor Davis",
+          "entity": "North America Diagnostics",
+          "department": "Supply Chain",
+          "title": "Coordinator",
+          "monthlyCost": 10449
+        },
+        {
+          "employeeId": "E10050",
+          "employeeName": "Riley Johnson",
+          "entity": "Europe Genomics",
+          "department": "R&D",
+          "title": "Senior Analyst",
+          "monthlyCost": 14433
+        },
+        {
+          "employeeId": "E10055",
+          "employeeName": "Morgan Kim",
+          "entity": "Europe Genomics",
+          "department": "Marketing",
+          "title": "Manager",
+          "monthlyCost": 14859
+        },
+        {
+          "employeeId": "E10061",
+          "employeeName": "Riley Johnson",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Senior Analyst",
+          "monthlyCost": 12065
+        },
+        {
+          "employeeId": "E10070",
+          "employeeName": "Casey Garcia",
+          "entity": "North America Diagnostics",
+          "department": "IT",
+          "title": "Senior Analyst",
+          "monthlyCost": 15018
+        },
+        {
+          "employeeId": "E10075",
+          "employeeName": "Jordan Wilson",
+          "entity": "APAC Operations",
+          "department": "Finance",
+          "title": "Director",
+          "monthlyCost": 11000
+        },
+        {
+          "employeeId": "E10076",
+          "employeeName": "Jordan Wilson",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "title": "Manager",
+          "monthlyCost": 16090
+        },
+        {
+          "employeeId": "E10078",
+          "employeeName": "Jordan Lee",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "title": "Senior Analyst",
+          "monthlyCost": 17126
+        },
+        {
+          "employeeId": "E10087",
+          "employeeName": "Alex Chen",
+          "entity": "Manufacturing Services",
+          "department": "Operations",
+          "title": "Engineer",
+          "monthlyCost": 7952
+        },
+        {
+          "employeeId": "E10088",
+          "employeeName": "Taylor Lee",
+          "entity": "APAC Operations",
+          "department": "IT",
+          "title": "Scientist",
+          "monthlyCost": 13860
+        },
+        {
+          "employeeId": "E10096",
+          "employeeName": "Sam Kim",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "title": "Analyst",
+          "monthlyCost": 11432
+        },
+        {
+          "employeeId": "E10098",
+          "employeeName": "Avery Garcia",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "title": "Analyst",
+          "monthlyCost": 15345
+        },
+        {
+          "employeeId": "E10099",
+          "employeeName": "Casey Chen",
+          "entity": "Europe Genomics",
+          "department": "Commercial",
+          "title": "Engineer",
+          "monthlyCost": 9601
+        },
+        {
+          "employeeId": "E10108",
+          "employeeName": "Taylor Chen",
+          "entity": "Manufacturing Services",
+          "department": "Supply Chain",
+          "title": "Engineer",
+          "monthlyCost": 11290
+        },
+        {
+          "employeeId": "E10119",
+          "employeeName": "Riley Brown",
+          "entity": "North America Diagnostics",
+          "department": "Marketing",
+          "title": "Director",
+          "monthlyCost": 11533
+        },
+        {
+          "employeeId": "E10122",
+          "employeeName": "Alex Kim",
+          "entity": "Corporate Functions",
+          "department": "IT",
+          "title": "Coordinator",
+          "monthlyCost": 12571
+        },
+        {
+          "employeeId": "E10128",
+          "employeeName": "Casey Brown",
+          "entity": "Europe Genomics",
+          "department": "Finance",
+          "title": "Analyst",
+          "monthlyCost": 12362
+        },
+        {
+          "employeeId": "E10131",
+          "employeeName": "Casey Wilson",
+          "entity": "North America Diagnostics",
+          "department": "R&D",
+          "title": "Coordinator",
+          "monthlyCost": 14453
+        },
+        {
+          "employeeId": "E10132",
+          "employeeName": "Chris Davis",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "title": "Director",
+          "monthlyCost": 15011
+        },
+        {
+          "employeeId": "E10133",
+          "employeeName": "Jordan Patel",
+          "entity": "APAC Operations",
+          "department": "Operations",
+          "title": "Scientist",
+          "monthlyCost": 7439
+        },
+        {
+          "employeeId": "E10134",
+          "employeeName": "Taylor Wilson",
+          "entity": "APAC Operations",
+          "department": "Finance",
+          "title": "Engineer",
+          "monthlyCost": 7065
+        },
+        {
+          "employeeId": "E10137",
+          "employeeName": "Morgan Davis",
+          "entity": "Corporate Functions",
+          "department": "IT",
+          "title": "Analyst",
+          "monthlyCost": 6610
+        },
+        {
+          "employeeId": "E10139",
+          "employeeName": "Morgan Chen",
+          "entity": "APAC Operations",
+          "department": "Supply Chain",
+          "title": "Analyst",
+          "monthlyCost": 5709
+        },
+        {
+          "employeeId": "E10141",
+          "employeeName": "Jordan Kim",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Analyst",
+          "monthlyCost": 11734
+        },
+        {
+          "employeeId": "E10152",
+          "employeeName": "Alex Kim",
+          "entity": "Europe Genomics",
+          "department": "IT",
+          "title": "Engineer",
+          "monthlyCost": 15712
+        },
+        {
+          "employeeId": "E10171",
+          "employeeName": "Casey Davis",
+          "entity": "APAC Operations",
+          "department": "Commercial",
+          "title": "Engineer",
+          "monthlyCost": 12179
+        },
+        {
+          "employeeId": "E10178",
+          "employeeName": "Jamie Lee",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Manager",
+          "monthlyCost": 15246
+        },
+        {
+          "employeeId": "E10180",
+          "employeeName": "Chris Wilson",
+          "entity": "Europe Genomics",
+          "department": "HR",
+          "title": "Engineer",
+          "monthlyCost": 6041
+        },
+        {
+          "employeeId": "E10182",
+          "employeeName": "Sam Davis",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "title": "Director",
+          "monthlyCost": 6045
+        },
+        {
+          "employeeId": "E10183",
+          "employeeName": "Avery Lee",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Coordinator",
+          "monthlyCost": 9003
+        },
+        {
+          "employeeId": "E10184",
+          "employeeName": "Riley Garcia",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "title": "Coordinator",
+          "monthlyCost": 9493
+        },
+        {
+          "employeeId": "E10194",
+          "employeeName": "Riley Johnson",
+          "entity": "North America Diagnostics",
+          "department": "R&D",
+          "title": "Scientist",
+          "monthlyCost": 7071
+        }
+      ]
+    },
+    "wfp-transfers": {
+      "title": "Cost-center transfers",
+      "executiveSummary": "42 employees were classified as transfers. These records should be reviewed to confirm that cost allocation, reporting ownership, and forecast placement align with the destination organization.",
+      "transfers": [
+        {
+          "employeeId": "E10004",
+          "employeeName": "Riley Kim",
+          "entity": "APAC Operations",
+          "department": "R&D",
+          "previousCostCenter": "CC1002",
+          "currentCostCenter": "CC1024",
+          "monthlyCost": 9045
+        },
+        {
+          "employeeId": "E10008",
+          "employeeName": "Riley Lee",
+          "entity": "North America Diagnostics",
+          "department": "HR",
+          "previousCostCenter": "CC1010",
+          "currentCostCenter": "CC1019",
+          "monthlyCost": 10581
+        },
+        {
+          "employeeId": "E10014",
+          "employeeName": "Alex Davis",
+          "entity": "North America Diagnostics",
+          "department": "IT",
+          "previousCostCenter": "CC1013",
+          "currentCostCenter": "CC1003",
+          "monthlyCost": 9725
+        },
+        {
+          "employeeId": "E10020",
+          "employeeName": "Sam Smith",
+          "entity": "APAC Operations",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1015",
+          "currentCostCenter": "CC1014",
+          "monthlyCost": 7940
+        },
+        {
+          "employeeId": "E10023",
+          "employeeName": "Casey Lee",
+          "entity": "APAC Operations",
+          "department": "R&D",
+          "previousCostCenter": "CC1017",
+          "currentCostCenter": "CC1018",
+          "monthlyCost": 9095
+        },
+        {
+          "employeeId": "E10028",
+          "employeeName": "Sam Chen",
+          "entity": "North America Diagnostics",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1008",
+          "currentCostCenter": "CC1000",
+          "monthlyCost": 6735
+        },
+        {
+          "employeeId": "E10032",
+          "employeeName": "Riley Smith",
+          "entity": "APAC Operations",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1014",
+          "currentCostCenter": "CC1022",
+          "monthlyCost": 9874
+        },
+        {
+          "employeeId": "E10033",
+          "employeeName": "Chris Wilson",
+          "entity": "Manufacturing Services",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1001",
+          "currentCostCenter": "CC1000",
+          "monthlyCost": 10054
+        },
+        {
+          "employeeId": "E10036",
+          "employeeName": "Alex Johnson",
+          "entity": "Corporate Functions",
+          "department": "HR",
+          "previousCostCenter": "CC1022",
+          "currentCostCenter": "CC1014",
+          "monthlyCost": 16186
+        },
+        {
+          "employeeId": "E10038",
+          "employeeName": "Jordan Johnson",
+          "entity": "APAC Operations",
+          "department": "Finance",
+          "previousCostCenter": "CC1001",
+          "currentCostCenter": "CC1008",
+          "monthlyCost": 12051
+        },
+        {
+          "employeeId": "E10040",
+          "employeeName": "Avery Kim",
+          "entity": "Europe Genomics",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1022",
+          "currentCostCenter": "CC1006",
+          "monthlyCost": 10255
+        },
+        {
+          "employeeId": "E10043",
+          "employeeName": "Alex Davis",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1024",
+          "currentCostCenter": "CC1009",
+          "monthlyCost": 6859
+        },
+        {
+          "employeeId": "E10045",
+          "employeeName": "Riley Patel",
+          "entity": "Europe Genomics",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1017",
+          "currentCostCenter": "CC1010",
+          "monthlyCost": 13267
+        },
+        {
+          "employeeId": "E10047",
+          "employeeName": "Alex Patel",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "previousCostCenter": "CC1004",
+          "currentCostCenter": "CC1004",
+          "monthlyCost": 14801
+        },
+        {
+          "employeeId": "E10051",
+          "employeeName": "Taylor Chen",
+          "entity": "Europe Genomics",
+          "department": "Commercial",
+          "previousCostCenter": "CC1007",
+          "currentCostCenter": "CC1013",
+          "monthlyCost": 12375
+        },
+        {
+          "employeeId": "E10057",
+          "employeeName": "Jordan Lee",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "previousCostCenter": "CC1000",
+          "currentCostCenter": "CC1008",
+          "monthlyCost": 10982
+        },
+        {
+          "employeeId": "E10063",
+          "employeeName": "Riley Davis",
+          "entity": "APAC Operations",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1013",
+          "currentCostCenter": "CC1024",
+          "monthlyCost": 13849
+        },
+        {
+          "employeeId": "E10064",
+          "employeeName": "Chris Garcia",
+          "entity": "North America Diagnostics",
+          "department": "Commercial",
+          "previousCostCenter": "CC1005",
+          "currentCostCenter": "CC1022",
+          "monthlyCost": 13118
+        },
+        {
+          "employeeId": "E10065",
+          "employeeName": "Taylor Wilson",
+          "entity": "Corporate Functions",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1021",
+          "currentCostCenter": "CC1014",
+          "monthlyCost": 14649
+        },
+        {
+          "employeeId": "E10066",
+          "employeeName": "Jordan Smith",
+          "entity": "North America Diagnostics",
+          "department": "HR",
+          "previousCostCenter": "CC1007",
+          "currentCostCenter": "CC1011",
+          "monthlyCost": 12211
+        },
+        {
+          "employeeId": "E10077",
+          "employeeName": "Sam Wilson",
+          "entity": "Europe Genomics",
+          "department": "Marketing",
+          "previousCostCenter": "CC1018",
+          "currentCostCenter": "CC1009",
+          "monthlyCost": 13903
+        },
+        {
+          "employeeId": "E10081",
+          "employeeName": "Avery Wilson",
+          "entity": "Corporate Functions",
+          "department": "Marketing",
+          "previousCostCenter": "CC1022",
+          "currentCostCenter": "CC1023",
+          "monthlyCost": 6648
+        },
+        {
+          "employeeId": "E10093",
+          "employeeName": "Avery Smith",
+          "entity": "North America Diagnostics",
+          "department": "Marketing",
+          "previousCostCenter": "CC1017",
+          "currentCostCenter": "CC1023",
+          "monthlyCost": 5172
+        },
+        {
+          "employeeId": "E10094",
+          "employeeName": "Riley Johnson",
+          "entity": "Europe Genomics",
+          "department": "HR",
+          "previousCostCenter": "CC1009",
+          "currentCostCenter": "CC1024",
+          "monthlyCost": 9859
+        },
+        {
+          "employeeId": "E10095",
+          "employeeName": "Riley Kim",
+          "entity": "Europe Genomics",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1010",
+          "currentCostCenter": "CC1000",
+          "monthlyCost": 15562
+        },
+        {
+          "employeeId": "E10097",
+          "employeeName": "Morgan Davis",
+          "entity": "Manufacturing Services",
+          "department": "HR",
+          "previousCostCenter": "CC1005",
+          "currentCostCenter": "CC1004",
+          "monthlyCost": 13464
+        },
+        {
+          "employeeId": "E10100",
+          "employeeName": "Chris Lee",
+          "entity": "APAC Operations",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1018",
+          "currentCostCenter": "CC1001",
+          "monthlyCost": 16020
+        },
+        {
+          "employeeId": "E10104",
+          "employeeName": "Riley Chen",
+          "entity": "Corporate Functions",
+          "department": "Marketing",
+          "previousCostCenter": "CC1000",
+          "currentCostCenter": "CC1009",
+          "monthlyCost": 10180
+        },
+        {
+          "employeeId": "E10112",
+          "employeeName": "Riley Davis",
+          "entity": "Corporate Functions",
+          "department": "Operations",
+          "previousCostCenter": "CC1004",
+          "currentCostCenter": "CC1013",
+          "monthlyCost": 14449
+        },
+        {
+          "employeeId": "E10127",
+          "employeeName": "Sam Davis",
+          "entity": "APAC Operations",
+          "department": "Operations",
+          "previousCostCenter": "CC1017",
+          "currentCostCenter": "CC1004",
+          "monthlyCost": 15817
+        },
+        {
+          "employeeId": "E10147",
+          "employeeName": "Avery Davis",
+          "entity": "North America Diagnostics",
+          "department": "Finance",
+          "previousCostCenter": "CC1006",
+          "currentCostCenter": "CC1006",
+          "monthlyCost": 13873
+        },
+        {
+          "employeeId": "E10159",
+          "employeeName": "Sam Lee",
+          "entity": "North America Diagnostics",
+          "department": "Supply Chain",
+          "previousCostCenter": "CC1011",
+          "currentCostCenter": "CC1003",
+          "monthlyCost": 15671
+        },
+        {
+          "employeeId": "E10161",
+          "employeeName": "Riley Lee",
+          "entity": "North America Diagnostics",
+          "department": "Marketing",
+          "previousCostCenter": "CC1019",
+          "currentCostCenter": "CC1021",
+          "monthlyCost": 7758
+        },
+        {
+          "employeeId": "E10162",
+          "employeeName": "Morgan Brown",
+          "entity": "APAC Operations",
+          "department": "Operations",
+          "previousCostCenter": "CC1022",
+          "currentCostCenter": "CC1006",
+          "monthlyCost": 11272
+        },
+        {
+          "employeeId": "E10163",
+          "employeeName": "Taylor Chen",
+          "entity": "Corporate Functions",
+          "department": "Marketing",
+          "previousCostCenter": "CC1022",
+          "currentCostCenter": "CC1014",
+          "monthlyCost": 16131
+        },
+        {
+          "employeeId": "E10166",
+          "employeeName": "Avery Patel",
+          "entity": "Europe Genomics",
+          "department": "Marketing",
+          "previousCostCenter": "CC1002",
+          "currentCostCenter": "CC1022",
+          "monthlyCost": 15726
+        },
+        {
+          "employeeId": "E10173",
+          "employeeName": "Alex Patel",
+          "entity": "Manufacturing Services",
+          "department": "Commercial",
+          "previousCostCenter": "CC1018",
+          "currentCostCenter": "CC1009",
+          "monthlyCost": 13614
+        },
+        {
+          "employeeId": "E10174",
+          "employeeName": "Sam Lee",
+          "entity": "North America Diagnostics",
+          "department": "Finance",
+          "previousCostCenter": "CC1016",
+          "currentCostCenter": "CC1013",
+          "monthlyCost": 12778
+        },
+        {
+          "employeeId": "E10187",
+          "employeeName": "Alex Smith",
+          "entity": "Corporate Functions",
+          "department": "R&D",
+          "previousCostCenter": "CC1012",
+          "currentCostCenter": "CC1019",
+          "monthlyCost": 10280
+        },
+        {
+          "employeeId": "E10188",
+          "employeeName": "Avery Davis",
+          "entity": "Europe Genomics",
+          "department": "R&D",
+          "previousCostCenter": "CC1012",
+          "currentCostCenter": "CC1002",
+          "monthlyCost": 11973
+        },
+        {
+          "employeeId": "E10197",
+          "employeeName": "Morgan Johnson",
+          "entity": "APAC Operations",
+          "department": "HR",
+          "previousCostCenter": "CC1010",
+          "currentCostCenter": "CC1012",
+          "monthlyCost": 10042
+        },
+        {
+          "employeeId": "E10199",
+          "employeeName": "Sam Smith",
+          "entity": "North America Diagnostics",
+          "department": "IT",
+          "previousCostCenter": "CC1005",
+          "currentCostCenter": "CC1018",
+          "monthlyCost": 10882
+        }
+      ],
+      "reviewNotes": [
+        "Confirm the effective date of each transfer.",
+        "Validate that personnel cost moved to the correct cost center.",
+        "Check whether the forecast still contains cost in the prior organization.",
+        "Review whether management reporting requires reclassification."
+      ]
+    },
+    "wfp-delayed-hires": {
+      "title": "Delayed hires versus forecast",
+      "executiveSummary": "18 new hires started later than their forecast start date. The longest synthetic delay was 30 days.",
+      "delayedHires": [
+        {
+          "employeeId": "E10025",
+          "employeeName": "Morgan Wilson",
+          "entity": "Corporate Functions",
+          "department": "Commercial",
+          "forecastStartDate": "2026-02-06",
+          "actualStartDate": "2026-03-08",
+          "delayDays": 30,
+          "monthlyCost": 6841
+        },
+        {
+          "employeeId": "E10054",
+          "employeeName": "Jamie Lee",
+          "entity": "Europe Genomics",
+          "department": "R&D",
+          "forecastStartDate": "2026-05-06",
+          "actualStartDate": "2026-06-05",
+          "delayDays": 30,
+          "monthlyCost": 11465
+        },
+        {
+          "employeeId": "E10073",
+          "employeeName": "Riley Davis",
+          "entity": "North America Diagnostics",
+          "department": "R&D",
+          "forecastStartDate": "2026-03-14",
+          "actualStartDate": "2026-04-13",
+          "delayDays": 30,
+          "monthlyCost": 16757
+        },
+        {
+          "employeeId": "E10089",
+          "employeeName": "Casey Davis",
+          "entity": "Europe Genomics",
+          "department": "Operations",
+          "forecastStartDate": "2026-01-30",
+          "actualStartDate": "2026-03-01",
+          "delayDays": 30,
+          "monthlyCost": 11414
+        },
+        {
+          "employeeId": "E10110",
+          "employeeName": "Chris Smith",
+          "entity": "APAC Operations",
+          "department": "HR",
+          "forecastStartDate": "2026-12-27",
+          "actualStartDate": "2027-01-26",
+          "delayDays": 30,
+          "monthlyCost": 15711
+        },
+        {
+          "employeeId": "E10145",
+          "employeeName": "Jordan Chen",
+          "entity": "Corporate Functions",
+          "department": "HR",
+          "forecastStartDate": "2026-09-22",
+          "actualStartDate": "2026-10-22",
+          "delayDays": 30,
+          "monthlyCost": 11898
+        },
+        {
+          "employeeId": "E10150",
+          "employeeName": "Sam Davis",
+          "entity": "APAC Operations",
+          "department": "R&D",
+          "forecastStartDate": "2026-03-22",
+          "actualStartDate": "2026-04-21",
+          "delayDays": 30,
+          "monthlyCost": 5745
+        },
+        {
+          "employeeId": "E10005",
+          "employeeName": "Casey Brown",
+          "entity": "North America Diagnostics",
+          "department": "Operations",
+          "forecastStartDate": "2026-12-11",
+          "actualStartDate": "2026-12-26",
+          "delayDays": 15,
+          "monthlyCost": 8914
+        },
+        {
+          "employeeId": "E10017",
+          "employeeName": "Chris Patel",
+          "entity": "Manufacturing Services",
+          "department": "IT",
+          "forecastStartDate": "2026-11-12",
+          "actualStartDate": "2026-11-27",
+          "delayDays": 15,
+          "monthlyCost": 10340
+        },
+        {
+          "employeeId": "E10021",
+          "employeeName": "Riley Wilson",
+          "entity": "North America Diagnostics",
+          "department": "Operations",
+          "forecastStartDate": "2026-05-19",
+          "actualStartDate": "2026-06-03",
+          "delayDays": 15,
+          "monthlyCost": 17578
+        },
+        {
+          "employeeId": "E10111",
+          "employeeName": "Sam Brown",
+          "entity": "Corporate Functions",
+          "department": "Finance",
+          "forecastStartDate": "2026-11-08",
+          "actualStartDate": "2026-11-23",
+          "delayDays": 15,
+          "monthlyCost": 7660
+        },
+        {
+          "employeeId": "E10113",
+          "employeeName": "Jordan Brown",
+          "entity": "Manufacturing Services",
+          "department": "Commercial",
+          "forecastStartDate": "2026-02-03",
+          "actualStartDate": "2026-02-18",
+          "delayDays": 15,
+          "monthlyCost": 8794
+        },
+        {
+          "employeeId": "E10115",
+          "employeeName": "Jamie Davis",
+          "entity": "APAC Operations",
+          "department": "IT",
+          "forecastStartDate": "2026-03-01",
+          "actualStartDate": "2026-03-16",
+          "delayDays": 15,
+          "monthlyCost": 9349
+        },
+        {
+          "employeeId": "E10130",
+          "employeeName": "Casey Smith",
+          "entity": "Manufacturing Services",
+          "department": "Operations",
+          "forecastStartDate": "2026-08-30",
+          "actualStartDate": "2026-09-14",
+          "delayDays": 15,
+          "monthlyCost": 6971
+        },
+        {
+          "employeeId": "E10154",
+          "employeeName": "Jamie Brown",
+          "entity": "North America Diagnostics",
+          "department": "Finance",
+          "forecastStartDate": "2026-08-05",
+          "actualStartDate": "2026-08-20",
+          "delayDays": 15,
+          "monthlyCost": 13138
+        },
+        {
+          "employeeId": "E10155",
+          "employeeName": "Riley Patel",
+          "entity": "APAC Operations",
+          "department": "Marketing",
+          "forecastStartDate": "2026-10-25",
+          "actualStartDate": "2026-11-09",
+          "delayDays": 15,
+          "monthlyCost": 8441
+        },
+        {
+          "employeeId": "E10181",
+          "employeeName": "Morgan Davis",
+          "entity": "Manufacturing Services",
+          "department": "Supply Chain",
+          "forecastStartDate": "2026-10-28",
+          "actualStartDate": "2026-11-12",
+          "delayDays": 15,
+          "monthlyCost": 12197
+        },
+        {
+          "employeeId": "E10186",
+          "employeeName": "Morgan Smith",
+          "entity": "Manufacturing Services",
+          "department": "Commercial",
+          "forecastStartDate": "2026-12-12",
+          "actualStartDate": "2026-12-27",
+          "delayDays": 15,
+          "monthlyCost": 8214
+        }
+      ],
+      "costImpact": {
+        "delayedHireCount": 18,
+        "monthlyCostAssociatedWithDelayedHires": 191427,
+        "note": "This is a directional monthly-cost measure, not a prorated vacancy savings calculation."
+      }
+    },
+    "wfp-cost-risk": {
+      "title": "Personnel-cost risk summary",
+      "executiveSummary": "New hires add $502K of monthly personnel cost, while leavers represent $439K of monthly cost removed from the active workforce. The directional net monthly movement is $64K before timing, benefits, bonuses, and partial-month effects.",
+      "metrics": {
+        "newHireMonthlyCost": 502466,
+        "leaverMonthlyCost": 438871,
+        "directionalNetMonthlyCost": 63595,
+        "transferMonthlyCost": 494726,
+        "promotionMonthlyCost": 431382
+      },
+      "largestEntities": [
+        {
+          "entity": "North America Diagnostics",
+          "monthlyCost": 579020
+        },
+        {
+          "entity": "Europe Genomics",
+          "monthlyCost": 472934
+        },
+        {
+          "entity": "Corporate Functions",
+          "monthlyCost": 463191
+        },
+        {
+          "entity": "APAC Operations",
+          "monthlyCost": 441977
+        },
+        {
+          "entity": "Manufacturing Services",
+          "monthlyCost": 331411
+        }
+      ],
+      "riskFlags": [
+        "Delayed starts may create favorable vacancy timing that should not be treated as permanent.",
+        "Transfers can duplicate or misallocate forecast cost if the prior cost center is not cleared.",
+        "Promotions may require updated salary and bonus assumptions.",
+        "Leaver savings should reflect termination date and backfill assumptions."
+      ]
+    },
+    "wfp-executive-commentary": {
+      "title": "Draft headcount commentary",
+      "commentary": "Workforce activity included 43 new hires, 38 leavers, 42 transfers, and 39 promotions. Net headcount movement from hires and leavers was +5. New hires represent $502K of monthly cost, while leavers represent $439K. 18 new hires started later than forecast, which may create temporary vacancy savings. Finance should validate transfer effective dates, confirm backfill assumptions, and update forecast timing for delayed starts before finalizing personnel-cost commentary.",
+      "supportingMetrics": {
+        "newHires": 43,
+        "leavers": 38,
+        "netHeadcountChange": 5,
+        "delayedHires": 18,
+        "directionalNetMonthlyCost": "$64K"
+      },
+      "humanReview": {
+        "required": true,
+        "checks": [
+          "Confirm movement classifications with HR or workforce source data.",
+          "Validate start and termination dates for partial-month impact.",
+          "Confirm backfill and vacancy assumptions.",
+          "Review salary, bonus, benefits, and currency effects before publishing."
+        ]
+      }
+    }
+  }
+}
